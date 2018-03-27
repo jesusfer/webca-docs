@@ -297,30 +297,7 @@ poder emitir certificados digitales en base a una solicitud de un usuario</em>
 </tr>
 <tr>
 <th align="left" valign="top">Subobjetivos</th>
-<td align="left" valign="top">
-<ul>
-<a name="OBJ-0003" />
-<li>
-<b>[OBJ-0003] 
-Emisión mediante CSR</b>:
-		
-    El sistema deberá 
-<em>
-poder emitir un certificado digital usando los datos que recibe mediante un Certificate Signing Request (CSR)</em> <ul>
-</ul>
-</li>
-<a name="OBJ-0004" />
-<li>
-<b>[OBJ-0004] 
-Emisión mediante formulario web</b>:
-		
-    El sistema deberá 
-<em>
-emitir un certificado cuyos datos han sido proporcionado por una interfaz web</em> <ul>
-</ul>
-</li>
-</ul>
-</td>
+<td align="left" valign="top">Ninguno</td>
 </tr>
 <tr>
 <th align="left" valign="top">Importancia</th>
@@ -394,20 +371,7 @@ llevar un seguimiento de qué certificados digitales ha emitido y cuáles de ellos
 </tr>
 <tr>
 <th align="left" valign="top">Subobjetivos</th>
-<td align="left" valign="top">
-<ul>
-<a name="OBJ-0005" />
-<li>
-<b>[OBJ-0005] 
-Revocación mediante formulario web</b>:
-		
-    El sistema deberá 
-<em>
-dar la posibilidad de solicitar la revocación de un certificado al usuario que solicitó la creación del mismo certificado</em> <ul>
-</ul>
-</li>
-</ul>
-</td>
+<td align="left" valign="top">Ninguno</td>
 </tr>
 <tr>
 <th align="left" valign="top">Importancia</th>
@@ -619,30 +583,7 @@ Jesús Fernández</a>
 </tr>
 <tr>
 <th align="left" valign="top">Subobjetivos</th>
-<td align="left" valign="top">
-<ul>
-<a name="OBJ-0006" />
-<li>
-<b>[OBJ-0006] 
-Publicación de CRL</b>:
-		
-    El sistema deberá 
-<em>
-publicar las listas de revocación de certificados para que un sistema que use un certificado pueda comprobar que el certificado sigue siendo válido y no ha sido revocado</em> <ul>
-</ul>
-</li>
-<a name="OBJ-0007" />
-<li>
-<b>[OBJ-0007] 
-Respondedor OCSP</b>:
-		
-    El sistema deberá 
-<em>
-poder reponder a solicitudes OCSP para que un cliente pueda comprobar la validez de un certificado emitido por esta CA</em> <ul>
-</ul>
-</li>
-</ul>
-</td>
+<td align="left" valign="top">Ninguno</td>
 </tr>
 <tr>
 <th align="left" valign="top">Importancia</th>
@@ -709,7 +650,13 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -721,7 +668,7 @@ Jesús Fernández</a>
 <td colspan="2">
     El sistema deberá almacenar la información correspondiente a 
 <em>
-un usuario que accede al servicio para solicitar la expedición, renovación o revocación de un certificado digital.
+un usuario que hace uso del sistema que tendrá una serie de actividades disponibles según el rol que tenga en el sistema.
 				</em>
     En concreto:
 </td>
@@ -731,14 +678,20 @@ un usuario que accede al servicio para solicitar la expedición, renovación o rev
 <td colspan="2" align="left" valign="top">
 <ul>
 <li>
-<a name="DAT-0001" />
-Nombre</li>
-<li>
 <a name="DAT-0002" />
 Identificador
 								(<em>
 El identificador será la dirección de correo electrónico del usuario</em>)
 							</li>
+<li>
+<a name="DAT-0051" />
+Clave pública</li>
+<li>
+<a name="DAT-0001" />
+Nombre</li>
+<li>
+<a name="DAT-0052" />
+Rol</li>
 </ul>
 </td>
 </tr>
@@ -799,29 +752,41 @@ Ninguno</td>
 </tr>
 </table>
 <p />
-<a name="IRQ-0005" />
+<a name="IRQ-0007" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
-<th align="left" valign="top">IRQ-0005</th>
+<th align="left" valign="top">IRQ-0007</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Operador</th>
+Rol de usuario</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
 <td align="left" valign="top" colspan="2">1.0 
-			( 01/02/2018 )
+			( 27/03/2018 )
         </td>
 </tr>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -833,7 +798,7 @@ Operador</th>
 <td colspan="2">
     El sistema deberá almacenar la información correspondiente a 
 <em>
-un usuario que opera la Autoridad de Certificación y puede revisar el estado de las solicitudes y tomar decisiones sobre la expedición de los certificados.
+los diferentes roles de los usuarios que participan en las actividades de la autoridad de certificación donde el usuario de cada rol debe satisfacer una serie de restricciones.
 				</em>
     En concreto:
 </td>
@@ -843,11 +808,11 @@ un usuario que opera la Autoridad de Certificación y puede revisar el estado de 
 <td colspan="2" align="left" valign="top">
 <ul>
 <li>
-<a name="DAT-0016" />
-Nombre</li>
+<a name="DAT-0062" />
+Tipo de rol</li>
 <li>
-<a name="DAT-0017" />
-Identificador</li>
+<a name="DAT-0063" />
+Restricciones</li>
 </ul>
 </td>
 </tr>
@@ -913,7 +878,7 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">IRQ-0002</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Certificado</th>
+Certificado emitido</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
@@ -936,7 +901,13 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -948,7 +919,7 @@ Jesús Fernández</a>
 <td colspan="2">
     El sistema deberá almacenar la información correspondiente a 
 <em>
-un certificado digital.
+un certificado digital que hay emitido incluyendo el usuario solicitante, la plantilla que se usó para emitir el certificado y el estado de revocación.
 				</em>
     En concreto:
 </td>
@@ -959,25 +930,34 @@ un certificado digital.
 <ul>
 <li>
 <a name="DAT-0003" />
-Sujeto</li>
+Sujeto del certificado</li>
 <li>
 <a name="DAT-0004" />
-Fecha Validez Inicio</li>
+Fecha de inicio de validez</li>
 <li>
 <a name="DAT-0005" />
-Fecha Validez Fin</li>
+Fecha de fin de validez</li>
 <li>
 <a name="DAT-0006" />
-Emisor</li>
+Certificado emitido</li>
 <li>
-<a name="DAT-0007" />
-Clave Pública</li>
+<a name="DAT-0053" />
+Usuario solicitante</li>
 <li>
-<a name="DAT-0008" />
-Algoritmo Firma</li>
+<a name="DAT-0056" />
+Identificador de la plantilla</li>
 <li>
-<a name="DAT-0009" />
-Firma</li>
+<a name="DAT-0058" />
+Versión de la plantilla</li>
+<li>
+<a name="DAT-0059" />
+Estado de revocación</li>
+<li>
+<a name="DAT-0060" />
+Fecha de la revocación</li>
+<li>
+<a name="DAT-0061" />
+Motivo de la revocación</li>
 </ul>
 </td>
 </tr>
@@ -1043,7 +1023,7 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">IRQ-0003</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Solicitud Certificado</th>
+Solicitud de certificado</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
@@ -1066,7 +1046,13 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1078,7 +1064,7 @@ Jesús Fernández</a>
 <td colspan="2">
     El sistema deberá almacenar la información correspondiente a 
 <em>
-una solicitud de para que se expida un certificado digital asociado a una clave pública.
+una solicitud de emisión de un certificado digital incluyendo el usuario que hizo la solicitud y la plantilla que se requiere.
 				</em>
     En concreto:
 </td>
@@ -1088,20 +1074,17 @@ una solicitud de para que se expida un certificado digital asociado a una clave 
 <td colspan="2" align="left" valign="top">
 <ul>
 <li>
-<a name="DAT-0010" />
-Clave Pública</li>
+<a name="DAT-0055" />
+CSR</li>
 <li>
 <a name="DAT-0011" />
-Plantilla Usada</li>
+Identificador de la plantilla</li>
 <li>
-<a name="DAT-0012" />
-Firma Usuario</li>
-<li>
-<a name="DAT-0014" />
-Algoritmo Firma</li>
+<a name="DAT-0057" />
+Versión de la plantilla</li>
 <li>
 <a name="DAT-0013" />
-Identidad Usuario</li>
+Usuario solicitante</li>
 <li>
 <a name="DAT-0022" />
 Estado de la solicitud</li>
@@ -1170,7 +1153,7 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">IRQ-0004</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Plantilla Certificado</th>
+Plantilla de certificado</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
@@ -1193,7 +1176,13 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1205,7 +1194,7 @@ Jesús Fernández</a>
 <td colspan="2">
     El sistema deberá almacenar la información correspondiente a 
 <em>
-una plantilla de un certificado.
+una plantilla para emitir certificados digitales que define una serie de restricciones sobre las diferentes opciones para emitir certificados y también sobre las extensiones que incluirá el certificado.
 				</em>
     En concreto:
 </td>
@@ -1214,6 +1203,12 @@ una plantilla de un certificado.
 <th align="left" valign="top">Datos específicos</th>
 <td colspan="2" align="left" valign="top">
 <ul>
+<li>
+<a name="DAT-0054" />
+Identificador</li>
+<li>
+<a name="DAT-0050" />
+Versión</li>
 <li>
 <a name="DAT-0015" />
 Nombre</li>
@@ -1308,7 +1303,13 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -1407,7 +1408,7 @@ Requisitos de restricción</h2><a name="PRG-0002" />
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">CRQ-0001</th>
 <th align="left" valign="top" width="100%">
-Solicitud de certificado digital</th>
+Emisión a usuarios registrados</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
@@ -1482,6 +1483,86 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="CRQ-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">CRQ-0002</th>
+<th align="left" valign="top" width="100%">
+Validez del correo electrónico</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 27/03/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+	La información almacenada por el sistema deberá satisfacer la siguiente restricción: 
+<em>
+El sistema debe comprobar que el correo electrónico del usuario tiene un dominio autorizado por los operadores de la autoridad de certificación</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="SEC-0007" />
 <h2 align="left">3.3 
 Requisitos funcionales</h2><a name="SEC-0008" />
@@ -1529,7 +1610,7 @@ Jesús Fernández</a>
 <th align="left" valign="top">Descripción</th>
 <td align="left" valign="top">
     Este actor representa
-<em>un usuario que tiene acceso a todas las partes del sistema, incluyendo la clave privada que usa la CA para firmar los certificados</em>
+<em>un usuario que tiene acceso a todas las partes del sistema, incluyendo la posibilidad de cambiar la pareja de claves y el certificado que usa esta autoridad de certificación para firmar los certificados emitidos</em>
 </td>
 </tr>
 <tr>
@@ -1580,7 +1661,7 @@ Jesús Fernández</a>
 <th align="left" valign="top">Descripción</th>
 <td align="left" valign="top">
     Este actor representa
-<em>un usuario que tiene acceso a la parte de administración de la CA donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.</em>
+<em>un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.</em>
 </td>
 </tr>
 <tr>
@@ -1631,7 +1712,7 @@ Jesús Fernández</a>
 <th align="left" valign="top">Descripción</th>
 <td align="left" valign="top">
     Este actor representa
-<em>un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA</em>
+<em>un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación</em>
 </td>
 </tr>
 <tr>
@@ -1700,7 +1781,7 @@ Casos de uso del sistema</h3><a name="PRG-0003" />
 <a name="SEC-0013" />
 <h4 align="left">3.3.3.1 
 Registro de usuarios</h4><a name="PRG-0004" />
-<p>Casos de uso relacionados con el registro y administración de los usuarios que van a solicitar certificados digitales de la CA.</p>
+<p>Casos de uso relacionados con el registro y administración de los usuarios que van a solicitar certificados digitales a esta autoridad de certificación.</p>
 <a name="UC-0001" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
@@ -1747,14 +1828,14 @@ Jesús Fernández</a>
 Llevar un registro de los usuarios del sistema</a>
 </li>
 <li>
+<a href="#IRQ-0003" title="Solicitud de certificado">
+                                [IRQ-0003] 
+Solicitud de certificado</a>
+</li>
+<li>
 <a href="#IRQ-0001" title="Usuario">
                                 [IRQ-0001] 
 Usuario</a>
-</li>
-<li>
-<a href="#IRQ-0003" title="Solicitud Certificado">
-                                [IRQ-0003] 
-Solicitud Certificado</a>
 </li>
 </td>
 </tr>
@@ -1851,7 +1932,7 @@ autoriza la emisión del certificado de usuario</em>
 <td align="center" valign="top">8</td>
 <td>Si<em>
 el sistema está configurado para que el registro de nuevos usuarios esté supervisado por un operador,
-                                </em>el actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la CA donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
+                                </em>el actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
 Operador (ACT-0002)
     </a>
 <em>
@@ -2005,7 +2086,7 @@ El usuario debe estar registrado en el sistema</td>
 <tr>
 <a name="STP-0029" />
 <td align="center" valign="top">1</td>
-<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA">
+<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación">
 Usuario registrado (ACT-0003)
     </a>
 <em>
@@ -2024,7 +2105,7 @@ da al usuario tres opciones: autenticarse, registrarse o recuperar una cuenta</e
 <tr>
 <a name="STP-0031" />
 <td align="center" valign="top">3</td>
-<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA">
+<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación">
 Usuario registrado (ACT-0003)
     </a>
 <em>
@@ -2043,7 +2124,7 @@ solicita la dirección de correo electrónico con la que el usuario está registrad
 <tr>
 <a name="STP-0033" />
 <td align="center" valign="top">5</td>
-<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA">
+<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación">
 Usuario registrado (ACT-0003)
     </a>
 <em>
@@ -2202,7 +2283,7 @@ El usuario debe estar registrado en el sistema</td>
 <tr>
 <a name="STP-0039" />
 <td align="center" valign="top">1</td>
-<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA">
+<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación">
 Usuario registrado (ACT-0003)
     </a>
 <em>
@@ -2221,7 +2302,7 @@ muestra la página de bienvenida</em>
 <tr>
 <a name="STP-0041" />
 <td align="center" valign="top">3</td>
-<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta CA">
+<td>El actor<a href="#ACT-0003" title="Este actor representa un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación">
 Usuario registrado (ACT-0003)
     </a>
 <em>
@@ -2316,10 +2397,204 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="UC-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Revocación de usuario iniciada por administrador</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 16/02/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0009" title="Llevar un registro de los usuarios del sistema">
+                                [OBJ-0009] 
+Llevar un registro de los usuarios del sistema</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+un operador de la Autoridad de Certificación inicia la revocación de un certificado sin que el usuario que lo solicitó haya pedido la revocación.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0044" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
+Operador (ACT-0002)
+    </a>
+<em>
+accede al sistema y realiza una búsqueda en los certificados de usuario</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0045" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+devuelve los detalles del certificado que el Operador ha buscado y le da opciones para administrar el mismo</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0046" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
+Operador (ACT-0002)
+    </a>
+<em>
+elige la opción de revocar el certificado de usuario</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0047" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+solicita al operador el motivo de la revocación</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0048" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
+Operador (ACT-0002)
+    </a>
+<em>
+registra el motivo de la revocación</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0049" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+marca el certificado como revocado en el sistema con el motivo proporcionado por el operador</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="SEC-0014" />
 <h4 align="left">3.3.3.2 
 Solicitud de certificados</h4><a name="PRG-0005" />
-<p>Casos de uso relacionados con el proceso de solicitud y emisión de los certificados de usuario.</p>
+<p>Casos de uso relacionados con el proceso de solicitud y emisión de los certificados.</p>
 <a name="UC-0005" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
@@ -2336,23 +2611,30 @@ Solicitud via web</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Dependencias</th>
 <td align="left" valign="top" colspan="2">
-<li>
-<a href="#OBJ-0004" title="Emisión mediante formulario web">
-                                [OBJ-0004] 
-Emisión mediante formulario web</a>
-</li>
 <li>
 <a href="#OBJ-0001" title="Emitir certificados digitales">
                                 [OBJ-0001] 
@@ -2367,8 +2649,7 @@ Emitir certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un usuario solicita la emisión de un certificado mediante un formulario web.</em>
 </td>
 </tr>
 <tr>
@@ -2475,23 +2756,30 @@ Solicitud con CSR</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Dependencias</th>
 <td align="left" valign="top" colspan="2">
-<li>
-<a href="#OBJ-0003" title="Emisión mediante CSR">
-                                [OBJ-0003] 
-Emisión mediante CSR</a>
-</li>
 <li>
 <a href="#OBJ-0001" title="Emitir certificados digitales">
                                 [OBJ-0001] 
@@ -2506,8 +2794,7 @@ Emitir certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un usuario solicita la emisión de un certificado mediante una solicitud estándar CSR.</em>
 </td>
 </tr>
 <tr>
@@ -2640,8 +2927,7 @@ Emitir certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un usuario solicita la renovación de un certificado que ya había solicitado cuando dicho certificado está cerca de la fecha de expiración.</em>
 </td>
 </tr>
 <tr>
@@ -2748,13 +3034,25 @@ Emisión manual de un certificado</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -2779,8 +3077,7 @@ Emitir certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un operador recibe una alerta sobre un certificado que se debe emitir manualmente.</em>
 </td>
 </tr>
 <tr>
@@ -2871,17 +3168,17 @@ Ninguno</td>
 </tr>
 </table>
 <p />
-<a name="UC-0015" />
+<a name="UC-0017" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
-<th align="left" valign="top">UC-0015</th>
+<th align="left" valign="top">UC-0017</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Emisión automática de certificados</th>
+Solicitud de un conjunto de certificados</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
 <td align="left" valign="top" colspan="2">1.0
-            ( 19/02/2018 )
+            ( 27/03/2018 )
         </td>
 </tr>
 <tr>
@@ -2899,23 +3196,18 @@ Jesús Fernández</a>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Dependencias</th>
-<td align="left" valign="top" colspan="2">
-<li>
-<a href="#OBJ-0001" title="Emitir certificados digitales">
-                                [OBJ-0001] 
-Emitir certificados digitales</a>
-</li>
-<li>
-<a href="#OBJ-0010" title="Registro de validez de los certificados emitidos">
-                                [OBJ-0010] 
-Registro de validez de los certificados emitidos</a>
-</li>
-</td>
+<td align="left" valign="top" colspan="2">Ninguno</td>
 </tr>
 <tr>
 <th align="left" valign="top">Descripción</th>
@@ -2924,8 +3216,7 @@ Registro de validez de los certificados emitidos</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un usuario solicita varios certificados de una sola vez, usando un formulario web para rellenar los detalles.</em>
 </td>
 </tr>
 <tr>
@@ -3018,7 +3309,9 @@ Ninguno</td>
 <p />
 <a name="SEC-0015" />
 <h4 align="left">3.3.3.3 
-Revocación de certificados</h4><a name="UC-0008" />
+Revocación de certificados</h4><a name="PRG-0006" />
+<p>Casos de uso relacionados con la revocación de los certificados emitidos por esta Autoridad de Certificación.</p>
+<a name="UC-0008" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">UC-0008</th>
@@ -3034,23 +3327,30 @@ Revocación por el usuario</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Dependencias</th>
 <td align="left" valign="top" colspan="2">
-<li>
-<a href="#OBJ-0005" title="Revocación mediante formulario web">
-                                [OBJ-0005] 
-Revocación mediante formulario web</a>
-</li>
 <li>
 <a href="#OBJ-0002" title="Revocar certificados digitales">
                                 [OBJ-0002] 
@@ -3065,8 +3365,7 @@ Revocar certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un usuario quiere que un certificado emitido sea revocado por esta Autoridad de Certificación</em>
 </td>
 </tr>
 <tr>
@@ -3173,13 +3472,25 @@ Revocación por el operador</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3199,8 +3510,7 @@ Revocar certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un operador inicia la revocación de un certificado</em>
 </td>
 </tr>
 <tr>
@@ -3296,7 +3606,7 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">UC-0010</th>
 <th align="left" valign="top" width="100%" colspan="2">
-Revocación de la CA</th>
+Revocación de la Autoridad de Certificación</th>
 </tr>
 <tr>
 <th align="left" valign="top">Versión</th>
@@ -3307,13 +3617,25 @@ Revocación de la CA</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3333,8 +3655,7 @@ Revocar certificados digitales</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un administrador de WebCA inicia la revocación de la Autoridad de Certificación</em>
 </td>
 </tr>
 <tr>
@@ -3425,204 +3746,9 @@ Ninguno</td>
 </tr>
 </table>
 <p />
-<a name="UC-0004" />
-<table border="1" width="100%">
-<tr bgcolor="#c8e0e0">
-<th align="left" valign="top">UC-0004</th>
-<th align="left" valign="top" width="100%" colspan="2">
-Revocación de usuario iniciada por administrador</th>
-</tr>
-<tr>
-<th align="left" valign="top">Versión</th>
-<td align="left" valign="top" colspan="2">1.0
-            ( 16/02/2018 )
-        </td>
-</tr>
-<tr>
-<th align="left" valign="top">Autores</th>
-<td align="left" valign="top" colspan="2">
-<ul>
-<li>
-<a href="#STK-0001">
-Jesús Fernández</a>
-<br />
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Fuentes</th>
-<td align="left" valign="top" colspan="2">
-<ul>
-<li>
-<a href="#STK-0001">
-Jesús Fernández</a>
-<br />
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Dependencias</th>
-<td align="left" valign="top" colspan="2">
-<li>
-<a href="#OBJ-0009" title="Llevar un registro de los usuarios del sistema">
-                                [OBJ-0009] 
-Llevar un registro de los usuarios del sistema</a>
-</li>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Descripción</th>
-<td colspan="2">
-    El sistema deberá comportarse tal como se describe en el siguiente
-
-    caso de uso cuando
-<em>
-<font color="red"><b>PD</b></font>
-</em>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Precondición</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top" rowspan="7">Secuencia normal</th>
-<th align="center" valign="top">Paso</th>
-<th align="left" valign="top" width="100%">Acción</th>
-</tr>
-<tr>
-<a name="STP-0044" />
-<td align="center" valign="top">1</td>
-<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la CA donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
-Operador (ACT-0002)
-    </a>
-<em>
-accede al sistema y realiza una búsqueda en los certificados de usuario</em>
-</td>
-</tr>
-<tr>
-<a name="STP-0045" />
-<td align="center" valign="top">2</td>
-<td>El
-     
-    sistema<em>
-devuelve los detalles del certificado que el Operador ha buscado y le da opciones para administrar el mismo</em>
-</td>
-</tr>
-<tr>
-<a name="STP-0046" />
-<td align="center" valign="top">3</td>
-<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la CA donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
-Operador (ACT-0002)
-    </a>
-<em>
-elige la opción de revocar el certificado de usuario</em>
-</td>
-</tr>
-<tr>
-<a name="STP-0047" />
-<td align="center" valign="top">4</td>
-<td>El
-     
-    sistema<em>
-solicita al operador el motivo de la revocación</em>
-</td>
-</tr>
-<tr>
-<a name="STP-0048" />
-<td align="center" valign="top">5</td>
-<td>El actor<a href="#ACT-0002" title="Este actor representa un usuario que tiene acceso a la parte de administración de la CA donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.">
-Operador (ACT-0002)
-    </a>
-<em>
-registra el motivo de la revocación</em>
-</td>
-</tr>
-<tr>
-<a name="STP-0049" />
-<td align="center" valign="top">6</td>
-<td>El
-     
-    sistema<em>
-marca el certificado como revocado en el sistema con el motivo proporcionado por el operador</em>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Postcondición</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top" rowspan="2">Excepciones</th>
-<th align="center" valign="top">Paso</th>
-<th align="left" valign="top" width="100%">Acción</th>
-</tr>
-<tr>
-<td align="center" valign="top">
-                        -
-                    </td>
-<td>
-                        -
-                    </td>
-</tr>
-<tr>
-<th align="left" valign="top" rowspan="2">Rendimiento</th>
-<th align="center" valign="top">Paso</th>
-<th align="left" valign="top" width="100%">Tiempo máximo</th>
-</tr>
-<tr>
-<td align="center" valign="top">
-                        -
-                    </td>
-<td>
-                        -
-                    </td>
-</tr>
-<tr>
-<th align="left" valign="top">Frecuencia esperada</th>
-<td colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Importancia</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Urgencia</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Estado</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Estabilidad</th>
-<td align="left" valign="top" colspan="2">
-<font color="red"><b>PD</b></font>
-</td>
-</tr>
-<tr>
-<th align="left" valign="top">Comentarios</th>
-<td align="left" valign="top" colspan="2">
-Ninguno</td>
-</tr>
-</table>
-<p />
 <a name="SEC-0016" />
 <h4 align="left">3.3.3.4 
-Administración del sistema</h4><a name="UC-0011" />
+Administración de plantillas</h4><a name="UC-0011" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">UC-0011</th>
@@ -3638,13 +3764,25 @@ Creación de una plantilla</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3664,8 +3802,7 @@ Administrar plantillas de certificados</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un operador quiere registrar una nueva plantilla de certificado digital</em>
 </td>
 </tr>
 <tr>
@@ -3772,13 +3909,25 @@ Modificación de una plantilla</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3798,8 +3947,7 @@ Administrar plantillas de certificados</a>
 
     caso de uso cuando
 <em>
-<font color="red"><b>PD</b></font>
-</em>
+un operador necesita modificar una plantilla de certificados</em>
 </td>
 </tr>
 <tr>
@@ -3906,13 +4054,25 @@ Eliminación de una plantilla</th>
 <tr>
 <th align="left" valign="top">Autores</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
 <th align="left" valign="top">Fuentes</th>
 <td align="left" valign="top" colspan="2">
-<font color="red"><b>?</b></font>
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -3932,8 +4092,566 @@ Administrar plantillas de certificados</a>
 
     caso de uso cuando
 <em>
+un operador necesita eliminar una plantilla de certificados</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0018" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0018</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Activar una plantilla</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 27/03/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+un operador quiere activar una plantilla de certificados digitales para que los usuarios finales puedan usarla para solicitar certificados</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0019" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0019</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Desactivar una plantilla</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 27/03/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+un operador quiere desactivar una plantilla para que los usuarios finales no puedan solicitar certificados con dicha plantilla</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0017" />
+<h4 align="left">3.3.3.5 
+Administración del sistema</h4><a name="UC-0016" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0016</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Cambio del certificado de la CA</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 27/03/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
 <font color="red"><b>PD</b></font>
 </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0020" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0020</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Cambiar el rol de un usuario</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 27/03/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+un administrador quiere cambiar el rol de un usuario</em>
 </td>
 </tr>
 <tr>
@@ -4037,21 +4755,6 @@ Rastreabilidad</h1><a name="TRM-0001" />
 <a href="&#xA;                        #OBJ-0002" title="Revocar certificados digitales">OBJ-0002</a>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0003" title="Emisión mediante CSR">OBJ-0003</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0004" title="Emisión mediante formulario web">OBJ-0004</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0005" title="Revocación mediante formulario web">OBJ-0005</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0006" title="Publicación de CRL">OBJ-0006</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0007" title="Respondedor OCSP">OBJ-0007</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #OBJ-0008" title="Administrar plantillas de certificados">OBJ-0008</a>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
@@ -4063,7 +4766,7 @@ Rastreabilidad</h1><a name="TRM-0001" />
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #CRQ-0001" title="Solicitud de certificado digital">CRQ-0001</a>
+<a href="&#xA;                        #CRQ-0001" title="Emisión a usuarios registrados">CRQ-0001</a>
 </th>
 <td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
@@ -4080,6 +4783,11 @@ Rastreabilidad</h1><a name="TRM-0001" />
 <td align="center" valign="top">
                 -
             </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #CRQ-0002" title="Validez del correo electrónico">CRQ-0002</a>
+</th>
 <td align="center" valign="top">
                 -
             </td>
@@ -4100,7 +4808,7 @@ Rastreabilidad</h1><a name="TRM-0001" />
 <p align="center">
 <b>Matriz de rastreabilidad</b>:
         
-Objetivo - restricción</p>
+Objetivo - Restricción</p>
 <a name="TRM-0002" />
 <table border="1" width="100%">
 <tr>
@@ -4110,21 +4818,6 @@ Objetivo - restricción</p>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #OBJ-0002" title="Revocar certificados digitales">OBJ-0002</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0003" title="Emisión mediante CSR">OBJ-0003</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0004" title="Emisión mediante formulario web">OBJ-0004</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0005" title="Revocación mediante formulario web">OBJ-0005</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0006" title="Publicación de CRL">OBJ-0006</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0007" title="Respondedor OCSP">OBJ-0007</a>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #OBJ-0008" title="Administrar plantillas de certificados">OBJ-0008</a>
@@ -4140,21 +4833,6 @@ Objetivo - restricción</p>
 <th align="left" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #UC-0001" title="Registro de un usuario anónimo">UC-0001</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4185,21 +4863,6 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
 <td align="center" valign="top">
@@ -4220,21 +4883,6 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
 <td align="center" valign="top">
@@ -4245,21 +4893,6 @@ Objetivo - restricción</p>
 <th align="left" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #UC-0004" title="Revocación de usuario iniciada por administrador">UC-0004</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4290,21 +4923,6 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-<img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
-</td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
                 -
             </td>
 <td align="center" valign="top">
@@ -4318,21 +4936,6 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-<img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
-</td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4365,21 +4968,6 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
                 -
             </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
@@ -4391,21 +4979,6 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-<img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
-</td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4435,25 +5008,10 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
                 -
             </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #UC-0010" title="Revocación de la CA">UC-0010</a>
+<a href="&#xA;                        #UC-0010" title="Revocación de la Autoridad de Certificación">UC-0010</a>
 </th>
 <td align="center" valign="top">
                 -
@@ -4470,41 +5028,11 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
                 -
             </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #UC-0011" title="Creación de una plantilla">UC-0011</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4532,21 +5060,6 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
 <td align="center" valign="top">
@@ -4560,21 +5073,6 @@ Objetivo - restricción</p>
 <th align="left" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #UC-0013" title="Eliminación de una plantilla">UC-0013</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4605,21 +5103,6 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
 <img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
 </td>
 <td align="center" valign="top">
@@ -4628,11 +5111,28 @@ Objetivo - restricción</p>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #UC-0015" title="Emisión automática de certificados">UC-0015</a>
+<a href="&#xA;                        #UC-0016" title="Cambio del certificado de la CA">UC-0016</a>
 </th>
 <td align="center" valign="top">
-<img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
-</td>
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0017" title="Solicitud de un conjunto de certificados">UC-0017</a>
+</th>
 <td align="center" valign="top">
                 -
             </td>
@@ -4648,6 +5148,11 @@ Objetivo - restricción</p>
 <td align="center" valign="top">
                 -
             </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0018" title="Activar una plantilla">UC-0018</a>
+</th>
 <td align="center" valign="top">
                 -
             </td>
@@ -4658,8 +5163,51 @@ Objetivo - restricción</p>
                 -
             </td>
 <td align="center" valign="top">
-<img src="&#xA;C:\Tools\REM 1.2.2\xml\default\trace.gif&#xA;" />
-</td>
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0019" title="Desactivar una plantilla">UC-0019</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0020" title="Cambiar el rol de un usuario">UC-0020</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
 </tr>
 </table>
 <p align="center">
@@ -4675,21 +5223,6 @@ Objetivo - Caso de uso</p>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #OBJ-0002" title="Revocar certificados digitales">OBJ-0002</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0003" title="Emisión mediante CSR">OBJ-0003</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0004" title="Emisión mediante formulario web">OBJ-0004</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0005" title="Revocación mediante formulario web">OBJ-0005</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0006" title="Publicación de CRL">OBJ-0006</a>
-</th>
-<th align="center" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #OBJ-0007" title="Respondedor OCSP">OBJ-0007</a>
 </th>
 <th align="center" valign="top" bgcolor="#c8e0e0">
 <a href="&#xA;                        #OBJ-0008" title="Administrar plantillas de certificados">OBJ-0008</a>
@@ -4720,6 +5253,11 @@ Objetivo - Caso de uso</p>
 <td align="center" valign="top">
                 -
             </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0002" title="Certificado emitido">IRQ-0002</a>
+</th>
 <td align="center" valign="top">
                 -
             </td>
@@ -4738,23 +5276,8 @@ Objetivo - Caso de uso</p>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #IRQ-0002" title="Certificado">IRQ-0002</a>
+<a href="&#xA;                        #IRQ-0003" title="Solicitud de certificado">IRQ-0003</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4773,93 +5296,8 @@ Objetivo - Caso de uso</p>
 </tr>
 <tr>
 <th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #IRQ-0003" title="Solicitud Certificado">IRQ-0003</a>
+<a href="&#xA;                        #IRQ-0004" title="Plantilla de certificado">IRQ-0004</a>
 </th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-</tr>
-<tr>
-<th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #IRQ-0004" title="Plantilla Certificado">IRQ-0004</a>
-</th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-</tr>
-<tr>
-<th align="left" valign="top" bgcolor="#c8e0e0">
-<a href="&#xA;                        #IRQ-0005" title="Operador">IRQ-0005</a>
-</th>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
-<td align="center" valign="top">
-                -
-            </td>
 <td align="center" valign="top">
                 -
             </td>
@@ -4895,6 +5333,11 @@ Objetivo - Caso de uso</p>
 <td align="center" valign="top">
                 -
             </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0007" title="Rol de usuario">IRQ-0007</a>
+</th>
 <td align="center" valign="top">
                 -
             </td>
