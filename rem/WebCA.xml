@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE rem:requirementsProject SYSTEM "C:\Tools\REM 1.2.2\xml\REM_1_2_2.dtd">
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE rem:requirementsProject SYSTEM "D:\Tools\REM 1.2.2\xml\REM_1_2_2.dtd">
 <rem:requirementsProject
 xmlns:rem="http://rem.lsi.us.es">
 <rem:name>WebCA</rem:name>
@@ -291,6 +291,70 @@ Ninguno</rem:comments>
 <rem:description>
 <rem:tbd/></rem:description>
 </rem:objective>
+<rem:objective
+ oid = "OBJ-0011">
+<rem:name>
+Realizar validaciones previas a la emisión de un certificado</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>2</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+llevar a cabo algún tipo de validación previa a la emisión de un certificado para tener una seguridad mínima que el solicitante del certificado tiene derecho a solicitar el tipo de certificado que quiere</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0012">
+<rem:name>
+Administrar la autoridad de certificación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+dar opciones para administrar la autoridad de certificación como cambiar los permisos de los usuarios, cambiar el certificado de la CA o realizar tareas que puedan afectar al servicio que proporciona la autoridad de certificación</rem:description>
+</rem:objective>
 </rem:section>
 <rem:section
  oid = "SEC-0006">
@@ -407,6 +471,18 @@ Ninguno</rem:comments>
 <rem:specificData oid = "DAT-0052">
 <rem:description>
 Rol</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0072">
+<rem:description>
+Eliminado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0073">
+<rem:description>
+Motivo eliminación</rem:description>
 <rem:comments>
 Ninguno</rem:comments>
 </rem:specificData>
@@ -704,11 +780,29 @@ Restricciones del certificado</rem:description>
 <rem:comments>
 Ninguno</rem:comments>
 </rem:specificData>
+<rem:specificData oid = "DAT-0065">
+<rem:description>
+Visible</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0066">
+<rem:description>
+Nombre a mostrar</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0207">
+<rem:description>
+OID</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
 </rem:informationRequirement>
 <rem:informationRequirement
  oid = "IRQ-0006">
 <rem:name>
-Autoridad Certificación</rem:name>
+Autoridad de Certificación</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -721,7 +815,7 @@ Autoridad Certificación</rem:name>
 <rem:authors stakeholders ="STK-0001 "/>
 <rem:sources stakeholders ="STK-0001 "/>
 <rem:comments>
-Ninguno</rem:comments>
+La AC no tiene porqué tener un solo certificado para fimar. Si se decide cambiar el certificado, hay que mantener el antiguo para poder seguir firmando la CRL del mismo.</rem:comments>
 <rem:importance>
 <rem:tbd/>
 </rem:importance>
@@ -735,7 +829,7 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:relevantConcept>
-una Autoridad de Certificación que puede expedir certificados</rem:relevantConcept>
+una autoridad de certificación que puede emitir certificados digitales</rem:relevantConcept>
 <rem:averageLifeTime>
 <rem:tbd/>
 </rem:averageLifeTime>
@@ -761,6 +855,72 @@ Ninguno</rem:comments>
 <rem:specificData oid = "DAT-0021">
 <rem:description>
 Certificado público</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0008">
+<rem:name>
+Validación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:relevantConcept>
+una validación de identidad requerida por una plantilla de certificado</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:tbd/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:tbd/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:tbd/>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:tbd/>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0067">
+<rem:description>
+Tipo de validación</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0068">
+<rem:description>
+Fecha de expiración</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0069">
+<rem:description>
+Valor asociado</rem:description>
+<rem:comments>
+El valor asociado puede ser, por ejemplo, un nombre de dominio DNS o una dirección de correo electrónico.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0121">
+<rem:description>
+Fecha de expiración</rem:description>
 <rem:comments>
 Ninguno</rem:comments>
 </rem:specificData>
@@ -805,7 +965,7 @@ Ninguno</rem:comments>
 <rem:constraintRequirement
  oid = "CRQ-0001">
 <rem:name>
-Emisión a usuarios registrados</rem:name>
+Emisión solo a usuarios registrados</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -826,12 +986,12 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:description>
-Solo los usuarios registrados en el sistema pueden solicitar un certificado digital.</rem:description>
+solo los usuarios registrados en el sistema pueden solicitar un certificado digital.</rem:description>
 </rem:constraintRequirement>
 <rem:constraintRequirement
  oid = "CRQ-0002">
 <rem:name>
-Validez del correo electrónico</rem:name>
+Correo electrónico autorizado</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -858,7 +1018,165 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:description>
-El sistema debe comprobar que el correo electrónico del usuario tiene un dominio autorizado por los operadores de la autoridad de certificación</rem:description>
+el sistema debe comprobar que el correo electrónico del usuario tiene un dominio autorizado por los operadores de la autoridad de certificación</rem:description>
+</rem:constraintRequirement>
+<rem:constraintRequirement
+ oid = "CRQ-0003">
+<rem:name>
+Uso de certificados de operadores</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+un certificado de usuario asociado con una cuenta de usuario tipo operador no se puede usar para solicitar certificados digitales</rem:description>
+</rem:constraintRequirement>
+<rem:constraintRequirement
+ oid = "CRQ-0004">
+<rem:name>
+Uso de certificados de usuario final</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+un certificado de usuario final solo se puede usar para solicitar certificados digitales y realizar validaciones de identidades</rem:description>
+</rem:constraintRequirement>
+<rem:constraintRequirement
+ oid = "CRQ-0005">
+<rem:name>
+Validación de identidad necesaria</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+si una plantilla de certificado exige algún tipo de validación de identidad, un usuario solo puede solicitar un certificado para esa plantilla si tiene una validación registrada y validada según la identidad necesaria</rem:description>
+</rem:constraintRequirement>
+<rem:constraintRequirement
+ oid = "CRQ-0006">
+<rem:name>
+Expiración antes que la AC Raíz</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0004"/>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+la fecha de expiración de un certificado generado por la autoridad de certificación no puede ser posterior que la fecha de expiración del certificado raiz del certificado que se use para firmar</rem:description>
+</rem:constraintRequirement>
+<rem:constraintRequirement
+ oid = "CRQ-0007">
+<rem:name>
+Solicitud de revocación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:description>
+Solo un usuario que ha solicitado un certificado puede solicitar su revocación</rem:description>
 </rem:constraintRequirement>
 </rem:section>
 <rem:section
@@ -936,7 +1254,7 @@ Administrador</rem:name>
 <rem:sources stakeholders ="STK-0001 "/>
 <rem:comments>
 Ninguno</rem:comments>
-<rem:actorRole>un usuario que tiene acceso a todas las partes del sistema, incluyendo la posibilidad de cambiar la pareja de claves y el certificado que usa esta autoridad de certificación para firmar los certificados emitidos</rem:actorRole>
+<rem:actorRole>un usuario que tiene acceso a todas las partes del sistema, incluyendo la posibilidad de cambiar la pareja de claves y el certificado que usa esta autoridad de certificación para firmar los certificados emitidos. La autenticación de este usuario al sistema será con un certificado digital.</rem:actorRole>
 </rem:actor>
 <rem:actor
  oid = "ACT-0002">
@@ -955,7 +1273,7 @@ Operador</rem:name>
 <rem:sources stakeholders ="STK-0001 "/>
 <rem:comments>
 Ninguno</rem:comments>
-<rem:actorRole>un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario.</rem:actorRole>
+<rem:actorRole>un usuario que tiene acceso a la parte de administración de la autoridad de certificación donde puede configurar el servicio y controlar la emisión de los certificados si fuera necesario. La autenticación de este usuario al sistema será con un certificado digital.</rem:actorRole>
 </rem:actor>
 <rem:actor
  oid = "ACT-0003">
@@ -974,7 +1292,7 @@ Usuario registrado</rem:name>
 <rem:sources stakeholders ="STK-0001 "/>
 <rem:comments>
 Ninguno</rem:comments>
-<rem:actorRole>un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación</rem:actorRole>
+<rem:actorRole>un usuario conocido por el sistema y que puede solicitar la emisión o revocación de certificados digitales firmados por esta autoridad de certificación. La autenticación de este usuario al sistema será con un certificado digital.</rem:actorRole>
 </rem:actor>
 <rem:actor
  oid = "ACT-0004">
@@ -994,6 +1312,25 @@ Usuario anónimo</rem:name>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:actorRole>un usuario desconocido para el sistema por lo que no puede realizar ninguna otra acción que no sea registrarse en el sistema</rem:actorRole>
+</rem:actor>
+<rem:actor
+ oid = "ACT-0005">
+<rem:name>
+Instalador</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>un usuario que realiza la instalación de la autoridad de certificación y que va a realizar la configuración inicial y crear el primer usuario administrador. Este usuario será un usuario local del sistema operativo donde se instale el software.</rem:actorRole>
 </rem:actor>
 </rem:section>
 <rem:section
@@ -1064,7 +1401,7 @@ texto</rem:name>
 </rem:version>
 <rem:comments>
 Ninguno</rem:comments>
-<rem:text>Casos de uso relacionados con el registro y administración de los usuarios que van a solicitar certificados digitales a esta autoridad de certificación.</rem:text>
+<rem:text>Casos de uso relacionados con el registro y administración de los usuarios que van a partiticipar en esta autoridad de certificación, ya sea como usuario final o como operador.</rem:text>
 </rem:paragraph>
 <rem:useCase
  oid = "UC-0001">
@@ -1105,13 +1442,13 @@ El usuario recibe un certificado de usuario que le permite autenticarse en la ap
 accede al sistema iniciando una nueva sesión en el sistema</rem:description>
 </rem:actorAction>
 <rem:comments>
-Ninguno</rem:comments>
+</rem:comments>
 </rem:step>
 <rem:step oid = "STP-0035">
 <rem:number>2</rem:number>
 <rem:systemAction>
 <rem:description>
-da al usuario tres opciones: autenticarse, registrarse o recuperar una cuenta</rem:description>
+ofrece al usuario tres opciones: autenticarse, registrarse o recuperar una cuenta</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1129,7 +1466,7 @@ Ninguno</rem:comments>
 <rem:number>4</rem:number>
 <rem:systemAction>
 <rem:description>
-solicita al nuevo usuario los datos necesarios para registrar un nuevo usuario</rem:description>
+solicita al nuevo usuario los datos necesarios para registrar un nuevo usuario, entre ellos, una dirección de correo electrónico</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1143,8 +1480,24 @@ rellena los datos solicitados por el sistema</rem:description>
 <rem:comments>
 Ninguno</rem:comments>
 </rem:step>
-<rem:step oid = "STP-0025">
+<rem:step oid = "STP-0064">
 <rem:number>6</rem:number>
+<rem:useCaseAction useCase = "UC-0022"/><rem:stepException oid = "STX-0004">
+<rem:condition>
+la validación del correo electrónico falla</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica al usuario el fallo</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0025">
+<rem:number>7</rem:number>
 <rem:systemAction>
 <rem:description>
 procesa el registro del nuevo usuario y lo pone en la cola de solicitudes de certificado de usuario</rem:description>
@@ -1153,7 +1506,7 @@ procesa el registro del nuevo usuario y lo pone en la cola de solicitudes de cer
 Ninguno</rem:comments>
 </rem:step>
 <rem:step oid = "STP-0026">
-<rem:number>7</rem:number>
+<rem:number>8</rem:number>
 <rem:condition>
 el sistema está configurado para permitir el registro automático de nuevos usuarios</rem:condition>
 <rem:systemAction>
@@ -1164,7 +1517,7 @@ autoriza la emisión del certificado de usuario</rem:description>
 Ninguno</rem:comments>
 </rem:step>
 <rem:step oid = "STP-0027">
-<rem:number>8</rem:number>
+<rem:number>9</rem:number>
 <rem:condition>
 el sistema está configurado para que el registro de nuevos usuarios esté supervisado por un operador</rem:condition>
 <rem:actorAction actor = "ACT-0002">
@@ -1186,7 +1539,7 @@ Ninguno</rem:comments>
 Ninguno</rem:comments>
 </rem:step>
 <rem:step oid = "STP-0028">
-<rem:number>9</rem:number>
+<rem:number>10</rem:number>
 <rem:systemAction>
 <rem:description>
 procesa la autorización del registro de nuevo usuario, expide el certificado de usuario y envia el certificado al usuario</rem:description>
@@ -1219,11 +1572,11 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un usuario registrado quiere acceder al sistema, pero su certificado de usuario ha expirado o se ha perdido</rem:triggeringEvent>
+un usuario registrado quiera acceder al sistema, pero su certificado de usuario ha expirado o se ha sido perdido</rem:triggeringEvent>
 <rem:precondition>
 El usuario debe estar registrado en el sistema</rem:precondition>
 <rem:postcondition>
-El usuario recibe un certificado de usuario nuevo</rem:postcondition>
+El usuario recibe un nuevo certificado de usuario</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
@@ -1240,7 +1593,7 @@ Ninguno</rem:comments>
 <rem:number>2</rem:number>
 <rem:systemAction>
 <rem:description>
-da al usuario tres opciones: autenticarse, registrarse o recuperar una cuenta</rem:description>
+ofrece al usuario tres opciones: autenticarse, registrarse o recuperar una cuenta</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1296,7 +1649,7 @@ Ninguno</rem:comments>
 <rem:useCase
  oid = "UC-0003">
 <rem:name>
-Revocación de usuario iniciada por usuario</rem:name>
+Cancelación de registro iniciada por usuario</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -1317,11 +1670,11 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-el usuario piensa que se ha comprometido el certificado de usuario que usa para autenticarse en el sistema</rem:triggeringEvent>
+el usuario no desea seguir usando el servicio</rem:triggeringEvent>
 <rem:precondition>
 El usuario debe estar registrado en el sistema</rem:precondition>
 <rem:postcondition>
-El certificado de usuario queda revocado</rem:postcondition>
+Todos los certificados de usuario del usuario registrado quedan revocados y el usuario deja de poder usar el sistema</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
@@ -1347,7 +1700,7 @@ Ninguno</rem:comments>
 <rem:number>3</rem:number>
 <rem:actorAction actor = "ACT-0003">
 <rem:description>
-selecciona la opción de administrar sus certificados y, entonces, revocar su certificado de usuario</rem:description>
+selecciona la opción de administrar su cuenta o perfil y, entonces, selecciona cancelar su registro</rem:description>
 </rem:actorAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1356,7 +1709,7 @@ Ninguno</rem:comments>
 <rem:number>4</rem:number>
 <rem:systemAction>
 <rem:description>
-solicita confirmación al usuario para llevar a cabo la acción</rem:description>
+solicita confirmación al usuario para llevar a cabo la acción, preguntando si el usuario está seguro. Adicionalmente, el sistema puede preguntar al usuario si revocar todos los demás certificados que están asociados con su usuario</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1364,17 +1717,17 @@ Ninguno</rem:comments>
 <rem:step oid = "STP-0043">
 <rem:number>5</rem:number>
 <rem:condition>
-el usuario confirma la acción</rem:condition>
+el usuario accede a cancelar su registro</rem:condition>
 <rem:systemAction>
 <rem:description>
-revoca el certificado del usuario</rem:description>
+revoca todos los certificados de usuario asociados a este usuario</rem:description>
 </rem:systemAction>
 <rem:stepException oid = "STX-0003">
 <rem:condition>
 el usuario no confirma la acción</rem:condition>
 <rem:systemAction>
 <rem:description>
-dejará sin efecto la revocación del certificado</rem:description>
+dejará sin efecto la cancelación del registro</rem:description>
 </rem:systemAction>
 <rem:termination value = "TEV-0003"/>
 <rem:comments>
@@ -1383,11 +1736,22 @@ Ninguno</rem:comments>
 <rem:comments>
 Ninguno</rem:comments>
 </rem:step>
+<rem:step oid = "STP-0070">
+<rem:number>6</rem:number>
+<rem:condition>
+el usuario accede a revocar todos los certificados asociados con su usuario</rem:condition>
+<rem:systemAction>
+<rem:description>
+revoca todos los certificados que hayan sido solicitados por este usuario que aún sean vigentes</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0004">
 <rem:name>
-Revocación de usuario iniciada por administrador</rem:name>
+Cancelación de registro iniciada por administrador</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -1414,11 +1778,11 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un operador de la Autoridad de Certificación inicia la revocación de un certificado sin que el usuario que lo solicitó haya pedido la revocación.</rem:triggeringEvent>
+un operador de la autoridad de certificación inicia la cancelación del registro de un usuario unilateralmente</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en la autoridad de certificación</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El usuario deja de estar registrado quedando todos sus certificados de usuario revocados</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
@@ -1426,7 +1790,7 @@ un operador de la Autoridad de Certificación inicia la revocación de un certific
 <rem:number>1</rem:number>
 <rem:actorAction actor = "ACT-0002">
 <rem:description>
-accede al sistema y realiza una búsqueda en los certificados de usuario</rem:description>
+accede al sistema y realiza una búsqueda por el usuario al que se quiere cancelar su registro</rem:description>
 </rem:actorAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1435,7 +1799,7 @@ Ninguno</rem:comments>
 <rem:number>2</rem:number>
 <rem:systemAction>
 <rem:description>
-devuelve los detalles del certificado que el Operador ha buscado y le da opciones para administrar el mismo</rem:description>
+devuelve los detalles del usuario que se busca y le da opciones para administrar el mismo</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1444,7 +1808,7 @@ Ninguno</rem:comments>
 <rem:number>3</rem:number>
 <rem:actorAction actor = "ACT-0002">
 <rem:description>
-elige la opción de revocar el certificado de usuario</rem:description>
+elige la opción de eliminar la cuenta del usuario</rem:description>
 </rem:actorAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1453,7 +1817,7 @@ Ninguno</rem:comments>
 <rem:number>4</rem:number>
 <rem:systemAction>
 <rem:description>
-solicita al operador el motivo de la revocación</rem:description>
+solicita al operador el motivo de la eliminación</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1462,7 +1826,7 @@ Ninguno</rem:comments>
 <rem:number>5</rem:number>
 <rem:actorAction actor = "ACT-0002">
 <rem:description>
-registra el motivo de la revocación</rem:description>
+registra el motivo de la eliminación</rem:description>
 </rem:actorAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1471,7 +1835,319 @@ Ninguno</rem:comments>
 <rem:number>6</rem:number>
 <rem:systemAction>
 <rem:description>
-marca el certificado como revocado en el sistema con el motivo proporcionado por el operador</rem:description>
+marca al usuario como eliminado y revoca los certificados de usuario asociados al usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0071">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+marca como revocados los certificados que se hubieran emitido al usuario usando como motivo de revocación el que hubiera especificado el operador</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+</rem:section>
+<rem:section
+ oid = "SEC-0018">
+<rem:name>
+Validación de identidades</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>3</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>4</rem:level>
+<rem:number>3.3.3.2 </rem:number>
+<rem:paragraph
+ oid = "PRG-0007">
+<rem:name>
+texto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Casos de uso relacionados con los procesos de validación de la identidad del usuario u otras validaciones relacionadas con la emisión de certificados digitales.</rem:text>
+</rem:paragraph>
+<rem:useCase
+ oid = "UC-0021">
+<rem:name>
+Validación de un dominio DNS</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>3</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un usuario registrado quiera validar que un dominio DNS es de su propiedad para poder solicitar un certificado para ese dominio</rem:triggeringEvent>
+<rem:precondition>
+El usuario que solicita la validación debe estar registrado en el sistema</rem:precondition>
+<rem:postcondition>
+El sistema asocia el nombre de dominio DNS a la cuenta del usuario</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0074">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+accede al sistema y solicita una nueva validación de dominio DNS</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0075">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita el nombre del dominio DNS que se quiere validar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0076">
+<rem:number>3</rem:number>
+<rem:condition>
+el dominio tiene un registro de DNS tipo MX</rem:condition>
+<rem:systemAction>
+<rem:description>
+propone una serie de direcciones de correo electrónico estándar como webmaster@dominio o hostmaster@dominio para que el usuario elija una o solicita que el usuario escriba una con ese dominio</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0077">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+elije una dirección propuesta o escribe su propia dirección de correo</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0078">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+envía un correo electrónico a la dirección propuesta por el usuario en el que se incluye un código de un solo uso para confirmar que el usuario está relacionado con ese dominio</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0080">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+se queda a la espera de que el usuario reciba el código de un solo uso</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0005">
+<rem:condition>
+el usuario no recibe el correo electrónico</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita un nuevo código a una nueva dirección de correo electrónico</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0081">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+confirma el código al sistema</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0082">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita crear un registro TXT con un valor determinado en la zona DNS y se queda a la espera que el usuario confirme la creación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0083">
+<rem:number>9</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+confirma la creación del registro TXT en la zona DNS</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0084">
+<rem:number>10</rem:number>
+<rem:systemAction>
+<rem:description>
+confirma la existencia de un registro TXT en el dominio con el valor correcto y confirma la validación del dominio</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0006">
+<rem:condition>
+el sistema no puede confirmar la existencia de un registro TXT válido</rem:condition>
+<rem:systemAction>
+<rem:description>
+solicita de nuevo al usuario la creación del registro TXT y vuelve a quedar a la espera</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0022">
+<rem:name>
+Validación de correo electrónico</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>3</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un usuario necesita confirmar que tiene acceso a una dirección de correo electrónico</rem:triggeringEvent>
+<rem:precondition>
+El usuario debe tener una dirección de correo válida</rem:precondition>
+<rem:postcondition>
+El sistema asocia la dirección de correo electrónico a la cuenta del usuario</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0095">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita la validación de una dirección de correo electrónico</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0085">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita una dirección de correo al usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0086">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+envía al sistema una dirección de correo electrónico</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0087">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+envía un correo electrónico a la dirección propuesta por el usuario en el que se incluye un código de un solo uso para confirmar que tiene acceso a esa dirección de correo electrónico</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0088">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+se queda a la espera de que el usuario reciba el código de un solo uso</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0007">
+<rem:condition>
+el usuario no recibe el correo electrónico</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita un nuevo código al sistema</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0089">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+confirma el código al sistema</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0090">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+confirma la validez de la dirección de correo electrónico</rem:description>
 </rem:systemAction>
 <rem:comments>
 Ninguno</rem:comments>
@@ -1494,7 +2170,7 @@ Solicitud de certificados</rem:name>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:level>4</rem:level>
-<rem:number>3.3.3.2 </rem:number>
+<rem:number>3.3.3.3 </rem:number>
 <rem:paragraph
  oid = "PRG-0005">
 <rem:name>
@@ -1546,12 +2222,221 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un usuario solicita la emisión de un certificado mediante un formulario web.</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en el sistema, debe tener al menos una validación confirmada y debe haber generado una pareja de claves previamente</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El usuario recibe un certificado digital para la plantilla solicitada</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0091">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita al sistema emitir un nuevo certificado mediante un formulario web</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0092">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra una lista de las posibles plantillas que el usuario puede solicitar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0093">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+elige una de las plantillas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0096">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra al usuario los diferentes parámetros para el certificado solicitado que permite la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0099">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+rellena o escoge los parámetros de la plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0097">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita la clave pública del nuevo certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0100">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+envía la clave pública</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0101">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que los datos recibidos son válidos respecto a la plantilla</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0008">
+<rem:condition>
+alguno de los datos recibidos no es correcto</rem:condition>
+<rem:systemAction>
+<rem:description>
+notifica el error al usuario</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0102">
+<rem:number>9</rem:number>
+<rem:condition>
+la plantilla permite la emisión automática del certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+emite el certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0103">
+<rem:number>10</rem:number>
+<rem:condition>
+la plantilla no permite la emisión automática del certificado</rem:condition>
+<rem:useCaseAction useCase = "UC-0014"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0023">
+<rem:name>
+Generar un CSR</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un usuario quiera generar un CSR y descargarlo a su PC para reutilizarlo en otro momento</rem:triggeringEvent>
+<rem:precondition>
+El usuario debe estar registrado en el sistema</rem:precondition>
+<rem:postcondition>
+El usuario recibe un archivo que contiene el CSR o bien el contenido del CSR para que lo pueda copiar</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0146">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+accede al sistema y solicita crear un CSR</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0147">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al usuario los detalles necesarios para generar un CSR, entre ellos, los detalles del nombre distinguido del certificado y el tamaño de la pareja de claves a generar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0148">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+introduce los datos solicitados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0149">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+el sistema valida que los datos son correctos y solicita al usuario cómo quiere obtener el CSR: generar el CSR remotamente y descargarlo; u obtener una sentencia de openssl para generarlo localmente</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0016">
+<rem:condition>
+alguno de los datos introducidos por el usuario no es correcto</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica al usuario el error</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0152">
+<rem:number>5</rem:number>
+<rem:condition>
+el usuario solicita generar el CSR remotamente</rem:condition>
+<rem:systemAction>
+<rem:description>
+genera una nueva pareja de claves y un CSR y se lo da al usuario para descargar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0151">
+<rem:number>6</rem:number>
+<rem:condition>
+el usuario solicita generar la sentencia de openssl</rem:condition>
+<rem:systemAction>
+<rem:description>
+genera la sentencia openssl y se la muestra al usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0006">
@@ -1585,12 +2470,119 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un usuario solicita la emisión de un certificado mediante una solicitud estándar CSR.</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en el sistema y debe tener al menos una validación confirmada</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El usuario recibe un certificado digital para la plantilla seleccionada</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0105">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita al sistema emitir un nuevo certificado con el uso de un CSR</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0106">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al usuario que envíe el CSR al sistema</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0107">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+envía el CSR al sistema mediante un formulario web</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0108">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+recibe el CSR y comprueba que está bien formado</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0009">
+<rem:condition>
+el CSR recibido no está bien formado</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica el error</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0111">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+busca una plantilla que esté activa que se corresponda con el tipo de certificado que el usuario solicita</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0010">
+<rem:condition>
+el sistema no es capaz de encontrar una plantilla que se ajuste a la solicitud</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica el error</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0011">
+<rem:condition>
+se encuentra más de una plantilla que se pueda usar para emitir el certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra una lista de plantillas disponibles al usuario</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0114">
+<rem:number>6</rem:number>
+<rem:condition>
+el sistema muestra una lista con varias plantillas de certificado</rem:condition>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+elige la plantilla que más le conviene para emitir el certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0115">
+<rem:number>7</rem:number>
+<rem:condition>
+la plantilla permite la emisión automática del certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+emite el certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0116">
+<rem:number>8</rem:number>
+<rem:condition>
+la plantilla no permite la emisión automática del certificado</rem:condition>
+<rem:useCaseAction useCase = "UC-0014"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0007">
@@ -1603,43 +2595,6 @@ Renovación via web</rem:name>
 <rem:year>2018</rem:year>
 <rem:month>2</rem:month>
 <rem:day>16</rem:day>
-</rem:date>
-</rem:version>
-<rem:comments>
-Ninguno</rem:comments>
-<rem:importance>
-<rem:tbd/>
-</rem:importance>
-<rem:urgency>
-<rem:tbd/>
-</rem:urgency>
-<rem:status>
-<rem:tbd/>
-</rem:status>
-<rem:stability>
-<rem:tbd/>
-</rem:stability>
-<rem:triggeringEvent>
-un usuario solicita la renovación de un certificado que ya había solicitado cuando dicho certificado está cerca de la fecha de expiración.</rem:triggeringEvent>
-<rem:precondition>
-<rem:tbd/></rem:precondition>
-<rem:postcondition>
-<rem:tbd/></rem:postcondition>
-<rem:frequency>
-<rem:tbd/>
-</rem:frequency>
-</rem:useCase>
-<rem:useCase
- oid = "UC-0014">
-<rem:name>
-Emisión manual de un certificado</rem:name>
-<rem:version>
-<rem:major>1</rem:major>
-<rem:minor>0</rem:minor>
-<rem:date>
-<rem:year>2018</rem:year>
-<rem:month>2</rem:month>
-<rem:day>19</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
@@ -1659,14 +2614,99 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un operador recibe una alerta sobre un certificado que se debe emitir manualmente.</rem:triggeringEvent>
+un usuario solicita la renovación de un certificado que ya había solicitado cuando dicho certificado está cerca de la fecha de expiración.</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El usuario recibe un nuevo certificado digital que usa la plantilla del certificado original</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0117">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+solicita al sistema la lista de certificados que ha solicitado y emitido</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0118">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve la lista de certificados que el usuario ha solicitado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0119">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+elige uno de los certificados de la lista que ha expirado o que está próximo a que expire</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0123">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+busca la plantilla original y comprueba que es aún válida y que los datos del certificado concuerdan con los necesarios en la plantilla</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0013">
+<rem:condition>
+los datos del certificado no son adecuados para la plantilla original</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica el error al usuario</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0120">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba si el certificado requiere alguna validación y que la validación aún está vigente</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0012">
+<rem:condition>
+el certificado requiere una validación y la validación ha expirado</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica al usuario el error y le solicita que inicie de nuevo la validación requerida</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0124">
+<rem:number>6</rem:number>
+<rem:condition>
+la plantilla permite la emisión automática del certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+emite el certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0125">
+<rem:number>7</rem:number>
+<rem:condition>
+la plantilla no permite la emisión automática del certificado</rem:condition>
+<rem:useCaseAction useCase = "UC-0014"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0017">
@@ -1700,12 +2740,138 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un usuario solicita varios certificados de una sola vez, usando un formulario web para rellenar los detalles.</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El usuario recibe al menos uno de los certificados que ha solicitado</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+</rem:useCase>
+</rem:section>
+<rem:section
+ oid = "SEC-0019">
+<rem:name>
+Emisión de certificados</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>1</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>4</rem:level>
+<rem:number>3.3.3.4 </rem:number>
+<rem:useCase
+ oid = "UC-0014">
+<rem:name>
+Emisión manual de un certificado</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>2</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un operador recibe una alerta sobre un certificado que se debe emitir manualmente.</rem:triggeringEvent>
+<rem:precondition>
+Existe una solicitud de emisión de certificado que necesita una emisión manual</rem:precondition>
+<rem:postcondition>
+Se crea el certificado digital y se notifica al usuario que registró la solicitud</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0126">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede al sistema y solicita al sistema la lista de certificados pendientes de emisión</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0127">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve la lista de los certificados que están pendientes de aprobación para su emisión</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0128">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige un certificado pendiente de emisión</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0129">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve los detalles del certificado y los detalles de la validación si los hubiera</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0130">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+revisa todos los detalles del certificado y, si lo estima oportuno, autoriza la emisión del certificado</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0014">
+<rem:condition>
+el operador no autoriza la emisión del certificado</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+comunica al solicitante el rechazo de la emisión y marca la solicitud como rechazada</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0131">
+<rem:number>6</rem:number>
+<rem:condition>
+El operador aprueba la emisión del certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+emite el certificado y notifica al solicitante</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 </rem:section>
 <rem:section
@@ -1724,7 +2890,7 @@ Revocación de certificados</rem:name>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:level>4</rem:level>
-<rem:number>3.3.3.3 </rem:number>
+<rem:number>3.3.3.5 </rem:number>
 <rem:paragraph
  oid = "PRG-0006">
 <rem:name>
@@ -1774,14 +2940,68 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un usuario quiere que un certificado emitido sea revocado por esta Autoridad de Certificación</rem:triggeringEvent>
+un usuario quiere que un certificado emitido sea revocado por esta autoridad de certificación</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El usuario debe estar registrado en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El certificado queda revocado</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0132">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+accede al sistema y solicita la lista de certificados que ha solicitado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0133">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve la lista de certificados que el usuario ha solicitado y están emitidos</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0134">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+elige uno de los certificados que están emitidos para solicitar su revocación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0135">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al usuario un motivo para la revocación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0136">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0003">
+<rem:description>
+introduce un motivo y confirma la revocación del certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0137">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+marca el certificado como revocado y le confirma la acción al usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0009">
@@ -1815,24 +3035,89 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador inicia la revocación de un certificado</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+Debe existir un certificado emitido por la autoridad de certificación</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El certificado queda revocado</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0138">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede al sistema y solicita al sistema realizar una búsqueda para revocar un certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0139">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve los certificados que concuerdan con la búsqueda del operador</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0015">
+<rem:condition>
+no existe ningún certificado que concuerde con la búsqueda</rem:condition>
+<rem:systemAction>
+<rem:description>
+notifica que no hay coincidencias con la búsqueda</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0141">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el certificado que quiere revocar de la lista de resultados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0143">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los detalles del certificado y solicita al operador un motivo para la revocación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0144">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+introduce un motivo para la revocación y confirma la revocación del certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0145">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+marca el certificado como revocado y notifica al solicitante de la revocación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
- oid = "UC-0010">
+ oid = "UC-0033">
 <rem:name>
-Revocación de la Autoridad de Certificación</rem:name>
+Republicar un certificado</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
 <rem:date>
 <rem:year>2018</rem:year>
-<rem:month>2</rem:month>
-<rem:day>16</rem:day>
+<rem:month>4</rem:month>
+<rem:day>15</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
@@ -1852,14 +3137,79 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un administrador de WebCA inicia la revocación de la Autoridad de Certificación</rem:triggeringEvent>
+un operador inicia la republicación de un certificado, es decir, deshace la revocación de un certificado</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+Debe existir un certificado emitido y revocado por la autoridad de certificación</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El certificado deja de estar revocado</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0367">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede al sistema y solicita al sistema realizar una búsqueda para republicar un certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0368">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+devuelve los certificados que concuerdan con la búsqueda del operador</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0028">
+<rem:condition>
+no existe ningún certificado que concuerde con la búsqueda</rem:condition>
+<rem:systemAction>
+<rem:description>
+notifica que no hay coincidencias con la búsqueda</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0369">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona el certificado que quiere republicar de la lista de resultados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0370">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los detalles del certificado y solicita al operador confirmación para republicar el certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0371">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+confirma la republicación del certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0372">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+quita la marca de revocación del certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 </rem:section>
 <rem:section
@@ -1879,7 +3229,75 @@ Administración de plantillas</rem:name>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:level>4</rem:level>
-<rem:number>3.3.3.4 </rem:number>
+<rem:number>3.3.3.6 </rem:number>
+<rem:useCase
+ oid = "UC-0027">
+<rem:name>
+Buscar una plantilla</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un operador necesita buscar una plantilla en la lista de plantillas disponibles</rem:triggeringEvent>
+<rem:precondition>
+El operador debe tener permisos para poder administrar plantillas</rem:precondition>
+<rem:postcondition>
+El operador localiza una plantilla</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0208">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la administración del sistema y accede al apartado de plantillas de certificados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0209">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas disponibles y opciones para crear una nueva o ver la lista de plantillas activas</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0210">
+<rem:number>3</rem:number>
+<rem:condition>
+el operador no encuentra la plantilla que busca</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+realiza un filtro sobre la lista de plantillas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
 <rem:useCase
  oid = "UC-0011">
 <rem:name>
@@ -1912,12 +3330,142 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador quiere registrar una nueva plantilla de certificado digital</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El operador debe tener permisos para poder administrar plantillas</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+Se crea una nueva plantilla en el sistema</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0153">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la administración del sistema y accede al apartado de plantillas de certificados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0154">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas disponibles y opciones para crear una nueva o modificar una existente</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0155">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige crear una nueva plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0156">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita un nombre para la nueva plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0157">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+introduce el nombre para mostrar de la nueva plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0158">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que no existe una plantilla con ese nombre y muestra al operador las opciones básicas de la plantilla como uso del certificado, tamaño mínimo de la clave  y extensiones básicas</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0159">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+introduce los campos solicitados y elige las opciones básicas para el certificado</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0160">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+el sistema solicita ahora otras opciones y extensiones adicionales</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0161">
+<rem:number>9</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+introduce o selecciona las opciones o extensiones adicionales</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0164">
+<rem:number>10</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al operador que elija un método de validación de identidad</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0165">
+<rem:number>11</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+el operador elige una validación si es necesario y finaliza el proceso</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0162">
+<rem:number>12</rem:number>
+<rem:systemAction>
+<rem:description>
+muesta todas las opciones seleccionadas al operador para que las revise y solicita confirmación para crear la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0163">
+<rem:number>13</rem:number>
+<rem:condition>
+el operador confirma los detalles de la nueva plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+la almacena y establece el número de versión a 1</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0017">
+<rem:condition>
+el operador no confirma los datos de la plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+omite la creación del certificado</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0012">
@@ -1951,12 +3499,53 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador necesita modificar una plantilla de certificados</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El operador debe tener permisos para poder administrar plantillas y debe existir al menos una plantilla en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+La plantilla se actualiza en el sistema y su número de versión aumenta</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0213">
+<rem:number>1</rem:number>
+<rem:useCaseAction useCase = "UC-0027"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0169">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la plantilla que quiere modificar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0170">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los parámetros de la plantilla seleccionada para que el operador los pueda modificar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0171">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+modifica los parámetros de la plantilla que necesite y guarda los cambios</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0173">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que los cambios son válidos y guarda los detalles de la plantilla, incrementando en uno la versión de la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0013">
@@ -1990,12 +3579,64 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador necesita eliminar una plantilla de certificados</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El operador debe tener permisos para poder administrar plantillas y debe existir al menos una plantilla en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+Se elimina la plantilla del sistema</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0214">
+<rem:number>1</rem:number>
+<rem:useCaseAction useCase = "UC-0027"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0178">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la plantilla que quiere eliminar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0179">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los parámetros de la plantilla seleccionada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0180">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la opción de eliminar la plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0181">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita confirmación para eliminar la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0182">
+<rem:number>6</rem:number>
+<rem:condition>
+el operador confirma la eliminación</rem:condition>
+<rem:systemAction>
+<rem:description>
+marca la la plantilla seleccionada como eliminada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
  oid = "UC-0018">
@@ -2029,15 +3670,109 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador quiere activar una plantilla de certificados digitales para que los usuarios finales puedan usarla para solicitar certificados</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El operador debe tener permisos para poder administrar plantillas y debe existir al menos una plantilla en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+La plantilla se hace visible a los usuarios finales</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0183">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la administración del sistema y accede al apartado de plantillas de certificados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0184">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas disponibles y opciones para crear una nueva o ver la lista de plantillas activas</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0190">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la lista de plantillas activas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0191">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas activas del sistema y opciones para activar una nueva plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0194">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la opción de activar una plantilla existente</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0195">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de las plantillas disponibles que aún no están activas</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0185">
+<rem:number>7</rem:number>
+<rem:condition>
+el operador no encuentra la plantilla que busca</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+realiza un filtro sobre la lista de plantillas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0186">
+<rem:number>8</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la plantilla que quiere activar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0188">
+<rem:number>9</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra algunos parámetros básicos de la plantilla seleccionada y solicita confirmación al operador</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0196">
+<rem:number>10</rem:number>
+<rem:condition>
+el operador confirma la activación de la plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+activa la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 <rem:useCase
- oid = "UC-0019">
+ oid = "UC-0026">
 <rem:name>
 Desactivar una plantilla</rem:name>
 <rem:version>
@@ -2045,8 +3780,8 @@ Desactivar una plantilla</rem:name>
 <rem:minor>0</rem:minor>
 <rem:date>
 <rem:year>2018</rem:year>
-<rem:month>3</rem:month>
-<rem:day>27</rem:day>
+<rem:month>4</rem:month>
+<rem:day>10</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
@@ -2068,12 +3803,330 @@ Ninguno</rem:comments>
 <rem:triggeringEvent>
 un operador quiere desactivar una plantilla para que los usuarios finales no puedan solicitar certificados con dicha plantilla</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El operador debe tener permisos para poder administrar plantillas y debe existir al menos una plantilla en el sistema</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+La plantilla deja de ser visible para los usuarios</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0197">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la administración del sistema y accede al apartado de plantillas de certificados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0198">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas disponibles y opciones para crear una nueva o ver la lista de plantillas activas</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0199">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+accede a la lista de plantillas activas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0200">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de plantillas activas del sistema y opciones para activar una nueva plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0203">
+<rem:number>5</rem:number>
+<rem:condition>
+el operador no encuentra la plantilla que busca</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+realiza un filtro sobre la lista de plantillas activas</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0201">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+elige la opción de desactivar una plantilla existente</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0205">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita confirmación al operador para desactivar la plantilla elegida</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0206">
+<rem:number>8</rem:number>
+<rem:condition>
+el operador confirma la activación de la plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+desactiva la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0024">
+<rem:name>
+Restaurar una versión anterior de una plantilla</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un operador quiere ver los parámetros de una versión anterior de una plantilla</rem:triggeringEvent>
+<rem:precondition>
+El operador debe tener permisos para poder administrar plantillas</rem:precondition>
+<rem:postcondition>
+La plantilla se actualiza en el sistema y su número de versión aumenta</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0221">
+<rem:number>1</rem:number>
+<rem:useCaseAction useCase = "UC-0027"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0222">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la plantilla de la que quiere ver su historial</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0223">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los parámetros de la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0224">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción para ver el historial de la plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0225">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra la lista de versiones de la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0226">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona una versión anterior</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0227">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los parámetros de la versión seleccionada para que el operador pueda comparar los cambios con la última versión</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0228">
+<rem:number>8</rem:number>
+<rem:condition>
+el operador quiere ver una versión diferente de la seleccionada</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona una versión diferente del historial y se vuelve al paso 7</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0229">
+<rem:number>9</rem:number>
+<rem:condition>
+el operador decide restaurar la versión anterior que se está mostrando</rem:condition>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la opción para restaurar la versión</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0231">
+<rem:number>10</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita confirmación al operador para restaurar la versión elegida</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0232">
+<rem:number>11</rem:number>
+<rem:condition>
+el operador confirma la activación de la plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+realiza una copia de la versión de la plantilla a restaurar y establece su número de versión al número de versión más alto que haya de dicha plantilla más uno</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0025">
+<rem:name>
+Duplicar una plantilla</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un operador quiere duplicar una plantilla</rem:triggeringEvent>
+<rem:precondition>
+El operador debe tener permisos para administrar plantillas y debe existir al menos una plantilla</rem:precondition>
+<rem:postcondition>
+Se crea una nueva plantilla en el sistema</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0212">
+<rem:number>1</rem:number>
+<rem:useCaseAction useCase = "UC-0027"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0215">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+selecciona la plantilla que quiere duplicar y elige la opción para duplicar dicha plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0216">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+crea una nueva plantilla copiando los parámetros de la plantilla seleccionada por el operador y le ofrece la oportunidad de modificarlos</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0217">
+<rem:number>4</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+modifica los parámetros básicos, las extensiones y la validacion de la identidad de la nueva plantilla</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0219">
+<rem:number>5</rem:number>
+<rem:systemAction>
+<rem:description>
+muesta todas las opciones seleccionadas al operador para que las revise y solicita confirmación para crear la plantilla</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0220">
+<rem:number>6</rem:number>
+<rem:condition>
+el operador confirma los detalles de la nueva plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+la almacena y establece el número de versión a 1</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0018">
+<rem:condition>
+el operador no confirma los datos de la plantilla</rem:condition>
+<rem:systemAction>
+<rem:description>
+omite la creación del certificado</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 </rem:section>
 <rem:section
@@ -2094,22 +4147,364 @@ Administración del sistema</rem:name>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:level>4</rem:level>
-<rem:number>3.3.3.5 </rem:number>
-<rem:useCase
- oid = "UC-0016">
+<rem:number>3.3.3.7 </rem:number>
+<rem:section
+ oid = "SEC-0024">
 <rem:name>
-Cambio del certificado de la CA</rem:name>
+Configuración nodos</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
 <rem:date>
 <rem:year>2018</rem:year>
-<rem:month>3</rem:month>
-<rem:day>27</rem:day>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>5</rem:level>
+<rem:number>3.3.3.7.1 </rem:number>
+<rem:useCase
+ oid = "UC-0028">
+<rem:name>
+Configuración inicial de la autoridad de certificación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
 <rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Este caso cubre los pasos de la configuración inicial del sistema:<br/>- Configuración de la base de datos<br/>- Configuración del certificado de la CA<br/>- Creación del primer usuario administrador<br/><br/><br/>TODO:<br/>- Se podría crear una contraseña para poder añadir más servidores y podría ser la frase de paso del certificado de la CA</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+se quiere confirgurar la autoridad de certificación por primera vez</rem:triggeringEvent>
+<rem:precondition>
+Se ha instalado el software y aún no se ha configurado la autoridad de certificación</rem:precondition>
+<rem:postcondition>
+La autoridad de certificación queda configurada para que se puedan empezar a emitir certificados</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0255">
+<rem:number>1</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita los detalles del servidor de base de datos como nombre del servidor, nombre de la base de datos y la autenticación a usar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0256">
+<rem:number>2</rem:number>
+<rem:actorAction actor = "ACT-0005">
+<rem:description>
+introduce los datos del servidor de base de datos</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0257">
+<rem:number>3</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que los datos son correctos y que se puede conectar al servidor correctamente</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0021">
+<rem:condition>
+el sistema detecta que ya existe una instalación en esta base de datos</rem:condition>
+<rem:useCaseAction useCase = "UC-0029"/><rem:termination>
+<rem:tbd/>
+</rem:termination>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0259">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al usuario instalador si ya tiene un certificado de autoridad de certificación que quiera usar en esta CA o si quiere generar uno nuevo</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0261">
+<rem:number>5</rem:number>
+<rem:condition>
+el instalador indica tiene un certificado emitido</rem:condition>
+<rem:systemAction>
+<rem:description>
+solicita la ruta donde puede encontrar el certificado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0262">
+<rem:number>6</rem:number>
+<rem:condition>
+se debe generar un nuevo certificado</rem:condition>
+<rem:systemAction>
+<rem:description>
+solicita los parámetros del certificado a generar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0263">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita algún detalle extra como el nombre de la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0264">
+<rem:number>8</rem:number>
+<rem:actorAction actor = "ACT-0005">
+<rem:description>
+indica los detalles solicitados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0265">
+<rem:number>9</rem:number>
+<rem:systemAction>
+<rem:description>
+indica que se va a generar un usuario administrador y se solicita una contraseña</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0266">
+<rem:number>10</rem:number>
+<rem:actorAction actor = "ACT-0005">
+<rem:description>
+proporciona la contraseña</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0267">
+<rem:number>11</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra un resumen de todas las acciones que se van a llevar a cabo y los parámetros que se han proporcionado durante los pasos anteriores y solicita confirmación para continuar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0268">
+<rem:number>12</rem:number>
+<rem:actorAction actor = "ACT-0005">
+<rem:description>
+confirma las acciones</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0023">
+<rem:condition>
+el instalador no confirma las acciones a lleva a cabo</rem:condition>
+<rem:systemAction>
+<rem:description>
+indica que no se va a llevar a cabo ninguna acción</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0269">
+<rem:number>13</rem:number>
+<rem:systemAction>
+<rem:description>
+realiza la configuración del sistema</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0022">
+<rem:condition>
+la configuración inicial falla</rem:condition>
+<rem:systemAction>
+<rem:description>
+notifica el error al instalador</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0029">
+<rem:name>
+Añadir un servidor a una instalación existente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0004"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+durante la configuración inicial del servidor se detecta que en la base de datos ya hay configurada una CA</rem:triggeringEvent>
+<rem:precondition>
+La autoridad de certificación ya debe estar configurada</rem:precondition>
+<rem:postcondition>
+Un servidor adicional puede dar servicio</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0270">
+<rem:number>1</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra información de los detalles de la autoridad de certificación que ya está configurada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0271">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al instalador si quiere añadir este servidor a la instalación ya configurada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0273">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0005">
+<rem:description>
+confirma que quiere añadir el servidor a la instalación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0274">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+obtiene de la base de datos los parámetros necesarios para configurar el nuevo servidor y aplica estos cambios</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0024">
+<rem:condition>
+falla la configuración del nuevo servidor</rem:condition>
+<rem:systemAction>
+<rem:description>
+comunica el error al instalador</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0034">
+<rem:name>
+Cambiar el rol de un nodo</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0004"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un administrador quiere cambiar el rol de un servidor, es decir, cambiar los servicios que se ejecutan en él</rem:triggeringEvent>
+<rem:precondition>
+<rem:tbd/></rem:precondition>
+<rem:postcondition>
+<rem:tbd/></rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+</rem:useCase>
+</rem:section>
+<rem:section
+ oid = "SEC-0025">
+<rem:name>
+Configuración de la emisión</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>5</rem:level>
+<rem:number>3.3.3.7.2 </rem:number>
+<rem:useCase
+ oid = "UC-0032">
+<rem:name>
+Establecer las ubicaciones de los CPS</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
 <rem:comments>
 Ninguno</rem:comments>
 <rem:importance>
@@ -2135,9 +4530,235 @@ Ninguno</rem:comments>
 </rem:frequency>
 </rem:useCase>
 <rem:useCase
- oid = "UC-0020">
+ oid = "UC-0031">
 <rem:name>
-Cambiar el rol de un usuario</rem:name>
+Establecer la ubicación del servidor OCSP</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Un administrador puede elegir cambiar la URL del servidor OCSP de los certificados que se van a emitir desde el momento del cambio. Aun así, hay que mantener un historial de todas las URLs que se han usado ya que si hay algún certificado emitido con una URL anterior, hasta que el certificado expire la URL debe seguir siendo válida.</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+el administrador quiere cambiar la ruta del servidor OCSP asociado al certificado de autoridad de certificación actual</rem:triggeringEvent>
+<rem:precondition>
+Existe un servidor OCSP que da servicio al sistema</rem:precondition>
+<rem:postcondition>
+Se asocia una nueva URL para comprobación OCSP con el certificado actual</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0347">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+accede a la administración del sistema y accede a la sección de administración de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0348">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra diferentes opciones para administrar la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0350">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+elige administrar los servidores OCSP</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0351">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los certificados de AC que hay en el sistema y muestra las URL de los servidores OCSP asociadas a cada uno</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0352">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+elige añadir una nueva URL en el sistema</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0353">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita la nueva URL</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0354">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce la nueva URL</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0355">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que la URL es correcta y la asocia con el certificado actual de la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0027">
+<rem:condition>
+la URL introducida no es correcta</rem:condition>
+<rem:systemAction>
+<rem:description>
+muestra el error al administrador</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0030">
+<rem:name>
+Establecer la ubicación de las CRL</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Un administrador puede elegir cambiar la ubicación de las CRL de los certificados que se van a emitir desde el momento del cambio. Aun así, hay que mantener un historial de todas las ubicaciones que se han usado ya que si hay algún certificado emitido con una ubicación anterior, hasta que el certificado expire la ubicación debe seguir siendo válida.</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+el administrador quiera cambiar la ubicación de las CRL asociadas al certificado de AC actual</rem:triggeringEvent>
+<rem:precondition>
+La nueva ubicación debe ser válida</rem:precondition>
+<rem:postcondition>
+El sistema asocia la nueva ubicación al certificado actual</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0356">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+accede a la administración del sistema y accede a la sección de administración de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0357">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra diferentes opciones para administrar la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0358">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+elige administrar las ubicaciones de las CRL</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0359">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los certificados de AC que hay en el sistema y muestra las ubicaciones de las CRL asociadas a cada uno</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0360">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+modifica las ubicaciones de las CRL del certificado actual</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0361">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que las ubicaciones son válidas y asocia las nuevas ubicaciones con el certificado de AC actual</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0362">
+<rem:number>7</rem:number>
+<rem:condition>
+alguna ubicación anterior se eliminara y hubiera algún certificado que tenga esa ubicación en su extensión CRL</rem:condition>
+<rem:systemAction>
+<rem:description>
+mantiene la ubicación eliminada en el historial de ubicaciones</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+</rem:section>
+<rem:useCase
+ oid = "UC-0016">
+<rem:name>
+Cambio del certificado de la AC</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -2164,14 +4785,455 @@ Ninguno</rem:comments>
 <rem:tbd/>
 </rem:stability>
 <rem:triggeringEvent>
-un administrador quiere cambiar el rol de un usuario</rem:triggeringEvent>
+un administrador quiere cambiar el certificado de la autoridad de certificación</rem:triggeringEvent>
 <rem:precondition>
-<rem:tbd/></rem:precondition>
+El administrador debe tener un nuevo certificado digital válido que se pueda usar para firmar nuevos digitales</rem:precondition>
 <rem:postcondition>
-<rem:tbd/></rem:postcondition>
+El certificado de la autoridad de certificación cambia y desde ese momento los nuevos certificados emitidos por la AC estarán firmados por el nuevo certificado</rem:postcondition>
 <rem:frequency>
 <rem:tbd/>
 </rem:frequency>
+<rem:step oid = "STP-0275">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+accede a la administración del sistema y accede a la sección de administración de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0276">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra diferentes opciones para administrar la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0277">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+solicita cambiar el certificado de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0278">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra información sobre lo que implica este cambio y solicita continuar con el cambio</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0280">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+confirma que quiere seguir adelante con el cambio</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0281">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al administrador que proporcione el nuevo certificado de la autoridad de certificación y su pareja de claves asociada</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0282">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+proporciona el nuevo certificado y la pareja de claves asociada</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0283">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+confirma que el certificado es válido para el propósito que se necesita  y  comprueba que es consistente con las plantillas que están definidas en el sistema</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0026">
+<rem:condition>
+si el nuevo certificado es incompatible con alguna plantilla existente</rem:condition>
+<rem:systemAction>
+<rem:description>
+notifica al administrador que el certificado no es válido ya que hay plantillas que funcionarán con él</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0284">
+<rem:number>9</rem:number>
+<rem:systemAction>
+<rem:description>
+indica que el nuevo certificado es válido y vuelve a solicitar confirmación al administrador para hacer el cambio. Además, puede dar la opción al administrador opciones para:<br/>- volver a reemitir los certificados aún válidos emitidos por el certificado anterior<br/>- revocar los certificados anteriores<br/>- dejar de generar CRLs para el certificado anterior </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0285">
+<rem:number>10</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+confirma que quiere realizar el cambio y, si hiciera falta, reemitir o revocar los certificados ya emitidos.</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0025">
+<rem:condition>
+el administrador no confirma los cambios</rem:condition>
+<rem:systemAction>
+<rem:description>
+no realiza ningún cambio en la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0286">
+<rem:number>11</rem:number>
+<rem:systemAction>
+<rem:description>
+aplica los cambios necesarios para cambiar el certificado y la pareja de claves de la autoridad de certificación de acuerdo con el procedimiento acordado</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0287">
+<rem:number>12</rem:number>
+<rem:condition>
+el administrador eligió reemitir los certificados previos</rem:condition>
+<rem:systemAction>
+<rem:description>
+vuelve a emitir los certificados asociados a la pareja de claves anterior </rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0290">
+<rem:number>13</rem:number>
+<rem:condition>
+el administrador eligió revocar los certificados previos</rem:condition>
+<rem:systemAction>
+<rem:description>
+revoca los certificados emitidos por el certificado anterior</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0291">
+<rem:number>14</rem:number>
+<rem:condition>
+el administrador eligió dejar de generar CRLs para el certificado anterior</rem:condition>
+<rem:systemAction>
+<rem:description>
+dejará de generar CRLs firmadas con el certificado anterior</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0010">
+<rem:name>
+Revocación de la autoridad de certificación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>2</rem:month>
+<rem:day>16</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+La revocación de un certificado de CA es un caso raro y debería ser una excepción. Probablemente el mejor plan de acción es revocar todos los certificados emitidos por el certificado de la CA, dejar de usarlo y así dejar que el certificado de la CA expire.</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un administrador de la autoridad de certificación inicia la revocación de la autoridad de certificación</rem:triggeringEvent>
+<rem:precondition>
+Se decide revocar el certificado de la autoridad de certificación</rem:precondition>
+<rem:postcondition>
+El certificado de la autoridad de certificación queda revocado</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0235">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+accede a la administración del sistema y accede a la sección de administración de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0247">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra diferentes opciones para administrar la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0248">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+elige la opción para revocar la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0249">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra una descripción de las acciones que se van a llevar a cabo, como revocar todos los certificados emitidos y las consecuencias de hacerlo y solicita confirmación al usuario dos veces</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0250">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+confirma las dos veces la revocación de la autoridad de certificación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0251">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+revoca todos los certificados emitidos por esta autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0252">
+<rem:number>7</rem:number>
+<rem:systemAction>
+<rem:description>
+genera una última lista de revocación de certificados</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0253">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+confirma los cambios hechos al administrador y solicita al administrador si quiere cambiar el certificado de la autoridad de certificación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0254">
+<rem:number>9</rem:number>
+<rem:condition>
+el administrador confirma que quiere cambiar el certificado de la autoridad de certificación</rem:condition>
+<rem:useCaseAction useCase = "UC-0016"/><rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0020">
+<rem:name>
+Cambiar el rol de un operador</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>3</rem:month>
+<rem:day>27</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance>
+<rem:tbd/>
+</rem:importance>
+<rem:urgency>
+<rem:tbd/>
+</rem:urgency>
+<rem:status>
+<rem:tbd/>
+</rem:status>
+<rem:stability>
+<rem:tbd/>
+</rem:stability>
+<rem:triggeringEvent>
+un administrador quiere cambiar el rol de un operador</rem:triggeringEvent>
+<rem:precondition>
+Debe existir al menos un operador en la autoridad de certificación</rem:precondition>
+<rem:postcondition>
+Los permisos del operador cambian</rem:postcondition>
+<rem:frequency>
+<rem:tbd/>
+</rem:frequency>
+<rem:step oid = "STP-0233">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+accede a la administración del sistema y accede a la sección de permisos de los usuarios</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0234">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita al administrador un detalle del usuario para realizar una búsqueda</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0236">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce una cadena de texto que pueda servir para identificar al usuario, como el nombre, apellido o nombre de usuario</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0237">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+realiza una búsqueda entre los operadores de la autoridad de certificación y devuelve una lista de aquellos que coincidan con los criterios de búsqueda</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0019">
+<rem:condition>
+no se devuelve ningún resultado en la búsqueda</rem:condition>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+debe realizar una nueva búsqueda con unos términos diferentes</rem:description>
+</rem:actorAction>
+<rem:termination value = "TEV-0002"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0238">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+selecciona el usuario del operador que quiere modificar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0239">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los detalles del operador y opciones para administrar esta cuenta</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0240">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+elige la opción de modificar los permisos del usuario</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0241">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+muestra los diferentes permisos que hay disponibles y aquellos que ya están asignados al usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0242">
+<rem:number>9</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+realiza los cambios que necesite en los permiosos del usuario, añadiendo o quitando según estime oportuno y guarda los cambios</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0243">
+<rem:number>10</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba que los permisos nuevos tienen sentido y pide confirmación al administrador para hacer el cambio</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0244">
+<rem:number>11</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+confirma los cambios</rem:description>
+</rem:actorAction>
+<rem:stepException oid = "STX-0020">
+<rem:condition>
+el administrador no confirma los cambios</rem:condition>
+<rem:systemAction>
+<rem:description>
+no guarda los cambios en los permisos del usuario</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0245">
+<rem:number>12</rem:number>
+<rem:systemAction>
+<rem:description>
+aplica los cambios en los permisos del usuario</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
 </rem:useCase>
 </rem:section>
 </rem:section>
@@ -2195,16 +5257,16 @@ Ninguno</rem:comments>
 <rem:level>1</rem:level>
 <rem:number>4 </rem:number>
 <rem:traceabilityMatrix
- oid = "TRM-0001">
+ oid = "TRM-0003">
 <rem:name>
-Objetivo - Restricción</rem:name>
+Objetivo - Requisito de información</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
 <rem:date>
 <rem:year>2018</rem:year>
 <rem:month>2</rem:month>
-<rem:day>16</rem:day>
+<rem:day>20</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
@@ -2218,21 +5280,77 @@ Ninguno</rem:comments>
 <rem:th oid ="OBJ-0008"/>
 <rem:th oid ="OBJ-0009"/>
 <rem:th oid ="OBJ-0010"/>
+<rem:th oid ="OBJ-0011"/>
+<rem:th oid ="OBJ-0012"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="CRQ-0001"/>
+<rem:th oid ="IRQ-0001"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0002"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0003"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0004"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0006"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="CRQ-0002"/>
+<rem:th oid ="IRQ-0007"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0008"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 </rem:tr>
 </rem:traceabilityMatrix>
@@ -2258,6 +5376,8 @@ Ninguno</rem:comments>
 <rem:th oid ="OBJ-0008"/>
 <rem:th oid ="OBJ-0009"/>
 <rem:th oid ="OBJ-0010"/>
+<rem:th oid ="OBJ-0011"/>
+<rem:th oid ="OBJ-0012"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0001"/>
@@ -2265,6 +5385,8 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
@@ -2273,6 +5395,8 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
@@ -2282,13 +5406,17 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0004"/>
 <rem:td mark ="no"/>
-<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
@@ -2296,6 +5424,8 @@ Ninguno</rem:comments>
 <rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
@@ -2305,6 +5435,8 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
@@ -2313,12 +5445,16 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0008"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
@@ -2330,6 +5466,8 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0010"/>
@@ -2338,12 +5476,16 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0011"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
@@ -2354,12 +5496,16 @@ Ninguno</rem:comments>
 <rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0013"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
@@ -2369,6 +5515,8 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
@@ -2378,26 +5526,24 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0017"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
-<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
 <rem:th oid ="UC-0018"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-</rem:tr>
-<rem:tr>
-<rem:th oid ="UC-0019"/>
-<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
@@ -2408,21 +5554,163 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0021"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0022"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0023"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0024"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0025"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0026"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0027"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0028"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0029"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0030"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0031"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0032"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0033"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0034"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 </rem:traceabilityMatrix>
 <rem:traceabilityMatrix
- oid = "TRM-0003">
+ oid = "TRM-0001">
 <rem:name>
-Objetivo - Requisito de información</rem:name>
+Objetivo - Restricción</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
 <rem:date>
 <rem:year>2018</rem:year>
 <rem:month>2</rem:month>
-<rem:day>20</rem:day>
+<rem:day>16</rem:day>
 </rem:date>
 </rem:version>
 <rem:authors stakeholders ="STK-0001 "/>
@@ -2436,17 +5724,13 @@ Ninguno</rem:comments>
 <rem:th oid ="OBJ-0008"/>
 <rem:th oid ="OBJ-0009"/>
 <rem:th oid ="OBJ-0010"/>
+<rem:th oid ="OBJ-0011"/>
+<rem:th oid ="OBJ-0012"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="IRQ-0001"/>
+<rem:th oid ="CRQ-0001"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-</rem:tr>
-<rem:tr>
-<rem:th oid ="IRQ-0002"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
@@ -2454,7 +5738,29 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="IRQ-0003"/>
+<rem:th oid ="CRQ-0002"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="CRQ-0003"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="CRQ-0004"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
@@ -2462,23 +5768,29 @@ Ninguno</rem:comments>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="IRQ-0004"/>
+<rem:th oid ="CRQ-0005"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="CRQ-0006"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 </rem:tr>
 <rem:tr>
-<rem:th oid ="IRQ-0006"/>
+<rem:th oid ="CRQ-0007"/>
 <rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-<rem:td mark ="no"/>
-</rem:tr>
-<rem:tr>
-<rem:th oid ="IRQ-0007"/>
+<rem:td mark ="yes"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
 <rem:td mark ="no"/>
@@ -2502,6 +5814,1037 @@ Ninguno</rem:comments>
 <rem:comments>
 Ninguno
 </rem:comments>
+<rem:section
+ oid = "SEC-0021">
+<rem:name>
+Tipos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>1 </rem:number>
+<rem:objectType
+ oid = "TYP-0004">
+<rem:name>
+Key</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una clave en una pareja de claves</rem:description>
+<rem:attribute oid = "ATT-0314" baseType = "PVT-0004">
+<rem:name>
+Contents</rem:name>
+<rem:description>
+contenido de la clave codificado en base64</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0341" baseType = "PVT-0004">
+<rem:name>
+Type</rem:name>
+<rem:description>
+el tipo de la clave, es decir, el algoritmo usado para generar la clave</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0002">
+<rem:name>
+CertificateRequest</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una solicitud para obtener un certificado digital</rem:description>
+<rem:attribute oid = "ATT-0299" baseType = "PVT-0004">
+<rem:name>
+DistinguishedName</rem:name>
+<rem:description>
+el nombre distinguido para el que se solicita un certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0300" baseType = "PVT-0004">
+<rem:name>
+Contents</rem:name>
+<rem:description>
+la solicitud CSR en formato PKCS#10 codificada en base64</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:component oid = "COM-0345" baseType = "TYP-0008">
+<rem:name>
+User</rem:name>
+<rem:description>
+el usuario para quien ha sido emitido</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:component>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0005">
+<rem:name>
+CertificateTemplate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una plantilla para crear certificados digitales</rem:description>
+<rem:attribute oid = "ATT-0317" baseType = "PVT-0002">
+<rem:name>
+Days</rem:name>
+<rem:description>
+el número de días que el certificado será válido</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0319" baseType = "PVT-0002">
+<rem:name>
+Enabled</rem:name>
+<rem:description>
+la plantilla puede ser usada por los usuarios finales</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0320" baseType = "PVT-0002">
+<rem:name>
+Version</rem:name>
+<rem:description>
+número de versión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0335" baseType = "VAL-0004">
+<rem:name>
+BasicConstraints</rem:name>
+<rem:description>
+indica si el certificado es de una CA o entidad final</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0318" baseType = "PVT-0004">
+<rem:name>
+KeyUsage</rem:name>
+<rem:description>
+para qué se puede usar el certificado</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+9</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Valores posibles: digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment, keyAgreement, keyCertSign, cRLSign, encipherOnly and decipherOnly</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0336" baseType = "VAL-0002">
+<rem:name>
+ExtendedKeyUsage</rem:name>
+<rem:description>
+lista de OID que indica el propósito del certificado</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0338" baseType = "PVT-0004">
+<rem:name>
+CRLDistributionPoint</rem:name>
+<rem:description>
+la lista de URLs para obtener la CRL</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0339" baseType = "PVT-0004">
+<rem:name>
+AIA</rem:name>
+<rem:description>
+la lista de URLs del Authority Information Access (OCSP)</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0340" baseType = "PVT-0004">
+<rem:name>
+SigningAlgorithm</rem:name>
+<rem:description>
+el algoritmo usado para firmar</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:component oid = "COM-0343" baseType = "TYP-0007">
+<rem:name>
+CertificatePolicies</rem:name>
+<rem:description>
+la lista de CPS donde se pueden encontrar las normas de emisión del certificado</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:component>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0001">
+<rem:name>
+Certificate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un certificado digital emitido por la autoridad de certificación</rem:description>
+<rem:attribute oid = "ATT-0301" baseType = "PVT-0004">
+<rem:name>
+Subject</rem:name>
+<rem:description>
+el sujeto del certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[Sujeto del certificado]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:attribute oid = "ATT-0302" baseType = "PVT-0004">
+<rem:name>
+X509</rem:name>
+<rem:description>
+el certificado emitido codificado en formato base64</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0306" baseType = "PVT-0005">
+<rem:name>
+StartDate</rem:name>
+<rem:description>
+la fecha de inicio de validez</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0307" baseType = "PVT-0005">
+<rem:name>
+EndDate</rem:name>
+<rem:description>
+la fecha de fin de validez</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0308" baseType = "PVT-0002">
+<rem:name>
+SerialNumber</rem:name>
+<rem:description>
+número de serie único para este certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:component oid = "COM-0344" baseType = "TYP-0008">
+<rem:name>
+User</rem:name>
+<rem:description>
+el usuario para quien ha sido emitido</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:component>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0001" oid = "TYP-0006">
+<rem:name>
+RevokedCertificate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un certificado que está revocado</rem:description>
+<rem:attribute oid = "ATT-0328" baseType = "PVT-0005">
+<rem:name>
+RevokedDate</rem:name>
+<rem:description>
+la fecha de la revocación de este certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0329" baseType = "PVT-0004">
+<rem:name>
+RevocationReason</rem:name>
+<rem:description>
+la razón por la que el certificado está revocado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0007">
+<rem:name>
+CertificatePolicyInformation</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una estructura para registrar normas de emisión de certificados<br/></rem:description>
+<rem:attribute oid = "ATT-0377" baseType = "VAL-0002">
+<rem:name>
+PolicyId</rem:name>
+<rem:description>
+el OID de esta norma</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0378" baseType = "VAL-0003">
+<rem:name>
+Qualifiers</rem:name>
+<rem:description>
+la lista de normas que incluye la extensión</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0008">
+<rem:name>
+User</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un usuario del sistema</rem:description>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:section
+ oid = "SEC-0022">
+<rem:name>
+Tipos valor</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>1.1 </rem:number>
+<rem:userDefinedValueType
+ oid = "VAL-0002">
+<rem:name>
+OID</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un Object Identifier de ASN.1</rem:description>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0001">
+<rem:name>
+X509Extension</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una extensión para un certificado, CRL o CSR</rem:description>
+<rem:attribute oid = "ATT-0333" baseType = "VAL-0002">
+<rem:name>
+OID</rem:name>
+<rem:description>
+el identificador de la extensión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0334" baseType = "PVT-0004">
+<rem:name>
+Value</rem:name>
+<rem:description>
+Valor de la extensión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0382" baseType = "PVT-0002">
+<rem:name>
+Critical</rem:name>
+<rem:description>
+la criticidad de la extensión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0003">
+<rem:name>
+PolicyQualifier</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una norma que sigue la AC para emitir certificados</rem:description>
+<rem:attribute oid = "ATT-0379" baseType = "VAL-0002">
+<rem:name>
+Identifier</rem:name>
+<rem:description>
+el OID que identifica esta norma</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0381" baseType = "PVT-0004">
+<rem:name>
+Value</rem:name>
+<rem:description>
+la lista de políticas de este cualificador (CPS o UserNotice)</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0004">
+<rem:name>
+BasicConstraints</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un valor que identifica si el certificado es un certificado de AC</rem:description>
+<rem:attribute oid = "ATT-0383" baseType = "PVT-0002">
+<rem:name>
+CA</rem:name>
+<rem:description>
+un booleano que indica si el certificado es de una AC o no</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0384" baseType = "PVT-0002">
+<rem:name>
+PathLength</rem:name>
+<rem:description>
+el número máximo de certificados auto-firmados que puede haber entre este certificado y uno de entidad final</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0023">
+<rem:name>
+Asociaciones</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>2 </rem:number>
+<rem:associationType
+ oid = "ASO-0001">
+<rem:name>
+RevocationList</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una lista de revocación de certificados</rem:description>
+<rem:attribute oid = "ATT-0311" baseType = "PVT-0005">
+<rem:name>
+CreateDate</rem:name>
+<rem:description>
+la fecha de la emisión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0312" baseType = "PVT-0005">
+<rem:name>
+NextUpdate</rem:name>
+<rem:description>
+la fecha de la siguiente emisión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0313" baseType = "VAL-0001">
+<rem:name>
+ExtensionList</rem:name>
+<rem:description>
+la lista de extensiones de esta CRL</rem:description>
+<rem:isSet/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0342" baseType = "PVT-0004">
+<rem:name>
+SigningAlgorithm</rem:name>
+<rem:description>
+el algoritmo usado para firmar</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:role oid = "ROL-0331" baseType = "TYP-0001">
+<rem:name>
+SingingCertificate</rem:name>
+<rem:description>
+el certificado que firma la CRL</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:role>
+<rem:role oid = "ROL-0332" baseType = "TYP-0006">
+<rem:name>
+Certificates</rem:name>
+<rem:description>
+la lista de los certificados revocados</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+0</rem:lowerBound>
+<rem:upperBound>
+MAX</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:role>
+</rem:associationType>
+</rem:section>
+<rem:section
+ oid = "SEC-0020">
+<rem:name>
+Operaciones del sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>3 </rem:number>
+<rem:systemOperation
+ oid = "SOP-0004">
+<rem:name>
+CreateCSR</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Genera un nuevo CSR a partir de una clave pública y un nombre distinguido</rem:description>
+<rem:resultType>CertificateRequest</rem:resultType>
+<rem:parameter oid = "PAR-0297" baseType = "PVT-0004">
+<rem:name>
+distinguishedName</rem:name>
+<rem:description>
+el nombre distinguido para el que se solicita un certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:parameter oid = "PAR-0298" baseType = "TYP-0004">
+<rem:name>
+publicKey</rem:name>
+<rem:description>
+la clave pública para la que se crea el certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0363">
+<rem:name>Formato del DN</rem:name>
+<rem:expression>
+<rem:natural>
+distinguishedName debe ser un nombre distinguido en el formato correcto</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+</rem:systemOperation>
+<rem:systemOperation
+ oid = "SOP-0001">
+<rem:name>
+CreateCertificate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Genera un certificado digital desde un CSR</rem:description>
+<rem:resultType>Certificate</rem:resultType>
+<rem:parameter oid = "PAR-0292" baseType = "TYP-0002">
+<rem:name>
+csr</rem:name>
+<rem:description>
+una solicitud de certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:parameter oid = "PAR-0315" baseType = "TYP-0005">
+<rem:name>
+template</rem:name>
+<rem:description>
+la plantilla que define las características del certificado a emitir</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0364">
+<rem:name>csr</rem:name>
+<rem:expression>
+<rem:natural>
+csr debe ser un CSR codificado en base 64 válido</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:preconditionExpression oid = "PRE-0365">
+<rem:name>plantilla</rem:name>
+<rem:expression>
+<rem:natural>
+La plantilla debe ser una plantilla activa en el sistema</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0366">
+<rem:name>certificado</rem:name>
+<rem:expression>
+<rem:natural>
+El certificado emitido se añade a la lista de certificados emitidos de la AC y se asocia con el usuario que lo ha solicitado</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+<rem:systemOperation
+ oid = "SOP-0002">
+<rem:name>
+RevokeCertificate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Revoca un certificado</rem:description>
+<rem:resultType>Booleano</rem:resultType>
+<rem:parameter oid = "PAR-0294" baseType = "TYP-0001">
+<rem:name>
+certificate</rem:name>
+<rem:description>
+el certificado que se quiere revocar</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:parameter oid = "PAR-0295" baseType = "PVT-0004">
+<rem:name>
+reason</rem:name>
+<rem:description>
+la razón por la que se revoca el certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0386">
+<rem:name>certificado</rem:name>
+<rem:expression>
+<rem:natural>
+el certificado que se quiere revocar no debe haber expirado</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0385">
+<rem:name>certificado</rem:name>
+<rem:expression>
+<rem:natural>
+el certificado se añade a a lista de revocación de certificados de la AC</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+<rem:systemOperation
+ oid = "SOP-0003">
+<rem:name>
+RefreshCRL</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>13</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Crea una CRL nueva para un certificado de AC</rem:description>
+<rem:resultType>RevocationList</rem:resultType>
+<rem:parameter oid = "PAR-0296" baseType = "TYP-0001">
+<rem:name>
+forCertificate</rem:name>
+<rem:description>
+la CRL incluye los certificados revocados firmados por este certificado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:parameter oid = "PAR-0321" baseType = "PVT-0005">
+<rem:name>
+nextUpdate</rem:name>
+<rem:description>
+la fecha de la siguiente emisión</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0389">
+<rem:name>forCertificate</rem:name>
+<rem:expression>
+<rem:natural>
+el certificado usado para firmar la CRL debe ser aún válido</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:preconditionExpression oid = "PRE-0390">
+<rem:name>nextUpdate</rem:name>
+<rem:expression>
+<rem:natural>
+la fecha de la siguiente actualización no puede haber pasado ya</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+</rem:systemOperation>
+<rem:systemOperation
+ oid = "SOP-0005">
+<rem:name>
+RepublishCertificate</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2018</rem:year>
+<rem:month>4</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Quita la marca de revocación de un certificado revocado</rem:description>
+<rem:resultType>Certificate</rem:resultType>
+<rem:parameter oid = "PAR-0373" baseType = "TYP-0006">
+<rem:name>
+certificate</rem:name>
+<rem:description>
+certificado revocado que se quiere publicar</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0374">
+<rem:name>certificate</rem:name>
+<rem:expression>
+<rem:natural>
+certificate debe ser un certificado revocado cuya fecha de fin de validez no haya pasado aún</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0375">
+<rem:name>certificado</rem:name>
+<rem:expression>
+<rem:natural>
+el certificado se quita de la lista de certificados revocados</rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+<rem:operationException
+ oid = "OPX-0376">
+<rem:name>CertificateExpired</rem:name>
+<rem:operationCondition>
+<rem:expression>
+<rem:natural>
+la fecha de fin de validez ha pasado ya</rem:natural>
+<rem:ocl><![CDATA[false]]></rem:ocl>
+</rem:expression>
+</rem:operationCondition>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[true]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:operationException>
+</rem:systemOperation>
+</rem:section>
 </rem:d_requirementsSpecification>
 <rem:defectsSpecification oid = "DFS-0003">
 <rem:name>Registro de Conflictos y Defectos</rem:name>
@@ -2533,31 +6876,16 @@ Ninguno
 Ninguno
 </rem:comments>
 </rem:changeRequestsSpecification>
-<rem:trace source = "UC-0012"  target = "OBJ-0008" >
+<rem:trace source = "UC-0014"  target = "OBJ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "UC-0006"  target = "OBJ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0002"  target = "OBJ-0009" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0008"  target = "OBJ-0002" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0005"  target = "OBJ-0001" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0011"  target = "OBJ-0008" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0013"  target = "OBJ-0008" >
+<rem:trace source = "UC-0014"  target = "OBJ-0009" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "CRQ-0001"  target = "OBJ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "UC-0003"  target = "OBJ-0009" >
+<rem:trace source = "UC-0013"  target = "OBJ-0008" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "UC-0001"  target = "OBJ-0009" >
@@ -2566,28 +6894,430 @@ Ninguno
 <rem:trace source = "UC-0004"  target = "OBJ-0009" >
 <rem:isChecked/>
 </rem:trace>
+<rem:trace source = "UC-0006"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
 <rem:trace source = "UC-0007"  target = "OBJ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "UC-0009"  target = "OBJ-0002" >
+<rem:trace source = "UC-0012"  target = "OBJ-0008" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "UC-0010"  target = "OBJ-0002" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0014"  target = "OBJ-0009" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0001"  target = "IRQ-0003" >
-<rem:isChecked/>
-</rem:trace>
-<rem:trace source = "UC-0003"  target = "OBJ-0002" >
+<rem:trace source = "UC-0002"  target = "OBJ-0009" >
 <rem:isChecked/>
 </rem:trace>
 <rem:trace source = "UC-0001"  target = "IRQ-0001" >
 <rem:isChecked/>
 </rem:trace>
-<rem:trace source = "UC-0014"  target = "OBJ-0001" >
+<rem:trace source = "UC-0001"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0008"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0009"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0003"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0011"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "OBJ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0010"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0022"  target = "IRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0022"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0001"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0022"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0021"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "CRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0021"  target = "IRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0022"  target = "CRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0021"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "IRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0021"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0022"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0021"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0005"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "CRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0005"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0004"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0001"  target = "CRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0005"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0002"  target = "OBJ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0001"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0003"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0003"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0023"  target = "CRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0006"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0023"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0001"  target = "OBJ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0001"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0002"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0006"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0003"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0007"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0001"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0007"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0002"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0008"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0007"  target = "OBJ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0006"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0027"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0024"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0002"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0007"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0024"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0006"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0008"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0027"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0023"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "IRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0012"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0026"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "CRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0009"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0025"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "CRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "CRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0025"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "CRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "CRQ-0005" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0020"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0007"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0018"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "CRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0014"  target = "IRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0013"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0005"  target = "OBJ-0011" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "OBJ-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0017"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "CRQ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0026"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0008"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0011"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0018"  target = "OBJ-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0020"  target = "IRQ-0007" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0028"  target = "IRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0029"  target = "IRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0029"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0020"  target = "OBJ-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0016"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0020"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0028"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0010"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0010"  target = "IRQ-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0033"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0003"  target = "OBJ-0012" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0033"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0016"  target = "IRQ-0006" >
 <rem:isChecked/>
 </rem:trace>
 <rem:predefinedValueTypes>
@@ -2634,9 +7364,9 @@ Integer numbers</rem:description>
 </rem:definition>
 </rem:predefinedValueType>
 <rem:predefinedValueType
- oid = "PVT-0003">
+ oid = "PVT-0006">
 <rem:name>
-Natural</rem:name>
+Time</rem:name>
 <rem:version>
 <rem:major>1</rem:major>
 <rem:minor>0</rem:minor>
@@ -2647,9 +7377,9 @@ Natural</rem:name>
 </rem:date>
 </rem:version>
 <rem:comments>
-Predefined OCL type</rem:comments>
+Predefined OCL type (non-standard)</rem:comments>
 <rem:description>
-Natural numbers</rem:description>
+Hour:minutes:seconds</rem:description>
 <rem:definition>
 (null)
 </rem:definition>
@@ -2676,6 +7406,27 @@ Alphanumeric strings</rem:description>
 </rem:definition>
 </rem:predefinedValueType>
 <rem:predefinedValueType
+ oid = "PVT-0003">
+<rem:name>
+Natural</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Natural numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
  oid = "PVT-0005">
 <rem:name>
 Date</rem:name>
@@ -2696,37 +7447,16 @@ Dates</rem:description>
 (null)
 </rem:definition>
 </rem:predefinedValueType>
-<rem:predefinedValueType
- oid = "PVT-0006">
-<rem:name>
-Time</rem:name>
-<rem:version>
-<rem:major>1</rem:major>
-<rem:minor>0</rem:minor>
-<rem:date>
-<rem:year>2000</rem:year>
-<rem:month>10</rem:month>
-<rem:day>30</rem:day>
-</rem:date>
-</rem:version>
-<rem:comments>
-Predefined OCL type (non-standard)</rem:comments>
-<rem:description>
-Hour:minutes:seconds</rem:description>
-<rem:definition>
-(null)
-</rem:definition>
-</rem:predefinedValueType>
 </rem:predefinedValueTypes>
 <rem:predefinedValues>
+<rem:changeRequestStatusValue oid = "CRV-0001">
+<rem:name>PD</rem:name>
+</rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0002">
 <rem:name>pendiente de análisis</rem:name>
 </rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0003">
-<rem:name>pendiente de aprobar/rechazar</rem:name>
-</rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0001">
-<rem:name>PD</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0005">
+<rem:name>verificado</rem:name>
 </rem:changeRequestStatusValue>
 <rem:changeRequestStatusValue oid = "CRV-0004">
 <rem:name>pendiente de realización</rem:name>
@@ -2734,109 +7464,37 @@ Hour:minutes:seconds</rem:description>
 <rem:changeRequestStatusValue oid = "CRV-0006">
 <rem:name>rechazado</rem:name>
 </rem:changeRequestStatusValue>
-<rem:changeRequestStatusValue oid = "CRV-0005">
-<rem:name>verificado</rem:name>
+<rem:changeRequestStatusValue oid = "CRV-0003">
+<rem:name>pendiente de aprobar/rechazar</rem:name>
 </rem:changeRequestStatusValue>
-<rem:conflictStatusValue oid = "CSV-0002">
-<rem:name>no resuelto</rem:name>
-</rem:conflictStatusValue>
-<rem:conflictStatusValue oid = "CSV-0003">
-<rem:name>en proceso de negociación</rem:name>
-</rem:conflictStatusValue>
 <rem:conflictStatusValue oid = "CSV-0001">
 <rem:name>PD</rem:name>
+</rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0002">
+<rem:name>no resuelto</rem:name>
 </rem:conflictStatusValue>
 <rem:conflictStatusValue oid = "CSV-0004">
 <rem:name>resuelto</rem:name>
 </rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0003">
+<rem:name>en proceso de negociación</rem:name>
+</rem:conflictStatusValue>
+<rem:defectStatusValue oid = "DSV-0003">
+<rem:name>en proceso de negociación</rem:name>
+</rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0001">
 <rem:name>PD</rem:name>
-</rem:defectStatusValue>
-<rem:defectStatusValue oid = "DSV-0002">
-<rem:name>no eliminado</rem:name>
 </rem:defectStatusValue>
 <rem:defectStatusValue oid = "DSV-0004">
 <rem:name>eliminado</rem:name>
 </rem:defectStatusValue>
-<rem:defectStatusValue oid = "DSV-0003">
-<rem:name>en proceso de negociación</rem:name>
+<rem:defectStatusValue oid = "DSV-0002">
+<rem:name>no eliminado</rem:name>
 </rem:defectStatusValue>
-<rem:defectTypeValue oid = "DTV-0007">
-<rem:name>No implementabilidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0010">
-<rem:name>Redundancia</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos son redundantes o contienen elementos redundantes]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0017">
-<rem:name>Organización incorrecta</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no están organizados correctamente según la normativa aplicada o el documento no contiene las secciones obligatorias]]>
-</rem:description>
-</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0002">
 <rem:name>Ambigüedad</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos, aunque comprensibles, tienen más de una interpretación posible]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0005">
-<rem:name>No verificabilidad</rem:name>
-<rem:description>
-<![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0012">
-<rem:name>Incompleción</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0003">
-<rem:name>No necesidad</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0006">
-<rem:name>Inconsistencia</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0008">
-<rem:name>Verbosidad excesiva</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0009">
-<rem:name>Dependiente del diseño</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0013">
-<rem:name>Prioridad no establecida</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0001">
-<rem:name>PD</rem:name>
-<rem:description>
-<![CDATA[Por Determinar]]>
-</rem:description>
-</rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0011">
-<rem:name>Imprecisión</rem:name>
-<rem:description>
-<![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0004">
@@ -2845,16 +7503,40 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos no pueden ser entendidos por algún lector]]>
 </rem:description>
 </rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0009">
+<rem:name>Dependiente del diseño</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0011">
+<rem:name>Imprecisión</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
+</rem:description>
+</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0014">
 <rem:name>Estabilidad no establecida</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos no tienen estimada su estabilidad]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:defectTypeValue oid = "DTV-0015">
-<rem:name>Nivel incorrecto de detalle</rem:name>
+<rem:defectTypeValue oid = "DTV-0005">
+<rem:name>No verificabilidad</rem:name>
 <rem:description>
-<![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
+<![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0001">
+<rem:name>PD</rem:name>
+<rem:description>
+<![CDATA[Por Determinar]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0013">
+<rem:name>Prioridad no establecida</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
 </rem:description>
 </rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0016">
@@ -2863,86 +7545,134 @@ Hour:minutes:seconds</rem:description>
 <![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
 </rem:description>
 </rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0017">
+<rem:name>Organización incorrecta</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están organizados correctamente según la normativa aplicada o el documento no contiene las secciones obligatorias]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0007">
+<rem:name>No implementabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0012">
+<rem:name>Incompleción</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0006">
+<rem:name>Inconsistencia</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0010">
+<rem:name>Redundancia</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos son redundantes o contienen elementos redundantes]]>
+</rem:description>
+</rem:defectTypeValue>
 <rem:defectTypeValue oid = "DTV-0023">
 <rem:name>Otro</rem:name>
 <rem:description>
 <![CDATA[El requisito o requisitos presentan otro tipo de defecto]]>
 </rem:description>
 </rem:defectTypeValue>
-<rem:importanceValue oid = "IMV-0004">
-<rem:name>quedaría bien</rem:name>
-</rem:importanceValue>
+<rem:defectTypeValue oid = "DTV-0015">
+<rem:name>Nivel incorrecto de detalle</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0008">
+<rem:name>Verbosidad excesiva</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0003">
+<rem:name>No necesidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
+</rem:description>
+</rem:defectTypeValue>
 <rem:importanceValue oid = "IMV-0002">
 <rem:name>vital</rem:name>
-</rem:importanceValue>
-<rem:importanceValue oid = "IMV-0003">
-<rem:name>importante</rem:name>
 </rem:importanceValue>
 <rem:importanceValue oid = "IMV-0001">
 <rem:name>PD</rem:name>
 </rem:importanceValue>
-<rem:stabilityValue oid = "SBV-0002">
-<rem:name>baja</rem:name>
+<rem:importanceValue oid = "IMV-0004">
+<rem:name>quedaría bien</rem:name>
+</rem:importanceValue>
+<rem:importanceValue oid = "IMV-0003">
+<rem:name>importante</rem:name>
+</rem:importanceValue>
+<rem:stabilityValue oid = "SBV-0001">
+<rem:name>PD</rem:name>
 </rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0003">
 <rem:name>media</rem:name>
 </rem:stabilityValue>
-<rem:stabilityValue oid = "SBV-0001">
-<rem:name>PD</rem:name>
+<rem:stabilityValue oid = "SBV-0002">
+<rem:name>baja</rem:name>
 </rem:stabilityValue>
 <rem:stabilityValue oid = "SBV-0004">
 <rem:name>alta</rem:name>
 </rem:stabilityValue>
+<rem:statusValue oid = "STV-0002">
+<rem:name>en construcción</rem:name>
+</rem:statusValue>
 <rem:statusValue oid = "STV-0001">
 <rem:name>PD</rem:name>
 </rem:statusValue>
 <rem:statusValue oid = "STV-0003">
 <rem:name>pendiente de verificación</rem:name>
 </rem:statusValue>
-<rem:statusValue oid = "STV-0002">
-<rem:name>en construcción</rem:name>
+<rem:statusValue oid = "STV-0004">
+<rem:name>pendiente de validación</rem:name>
 </rem:statusValue>
 <rem:statusValue oid = "STV-0005">
 <rem:name>validado</rem:name>
 </rem:statusValue>
-<rem:statusValue oid = "STV-0004">
-<rem:name>pendiente de validación</rem:name>
-</rem:statusValue>
-<rem:terminationValue oid = "TEV-0003">
-<rem:name>queda sin efecto</rem:name>
-</rem:terminationValue>
 <rem:terminationValue oid = "TEV-0001">
 <rem:name>PD</rem:name>
 </rem:terminationValue>
 <rem:terminationValue oid = "TEV-0002">
 <rem:name>continúa</rem:name>
 </rem:terminationValue>
-<rem:timeUnitValue oid = "TUV-0001">
-<rem:name>PD</rem:name>
-</rem:timeUnitValue>
+<rem:terminationValue oid = "TEV-0003">
+<rem:name>queda sin efecto</rem:name>
+</rem:terminationValue>
 <rem:timeUnitValue oid = "TUV-0002">
 <rem:name>año(s)</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0008">
-<rem:name>día(s)</rem:name>
-</rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0009">
-<rem:name>hora(s)</rem:name>
-</rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0010">
-<rem:name>minuto(s)</rem:name>
+<rem:timeUnitValue oid = "TUV-0001">
+<rem:name>PD</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0005">
 <rem:name>mes(es)</rem:name>
 </rem:timeUnitValue>
-<rem:timeUnitValue oid = "TUV-0011">
-<rem:name>segundo(s)</rem:name>
+<rem:timeUnitValue oid = "TUV-0008">
+<rem:name>día(s)</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0007">
 <rem:name>semana(s)</rem:name>
 </rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0010">
+<rem:name>minuto(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0009">
+<rem:name>hora(s)</rem:name>
+</rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0014">
 <rem:name>milisegundo(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0011">
+<rem:name>segundo(s)</rem:name>
 </rem:timeUnitValue>
 <rem:timeUnitValue oid = "TUV-0012">
 <rem:name>décima(s) de segundo</rem:name>
@@ -2950,8 +7680,8 @@ Hour:minutes:seconds</rem:description>
 <rem:timeUnitValue oid = "TUV-0013">
 <rem:name>centésima(s) de segundo</rem:name>
 </rem:timeUnitValue>
-<rem:urgencyValue oid = "URV-0002">
-<rem:name>inmediatamente</rem:name>
+<rem:urgencyValue oid = "URV-0001">
+<rem:name>PD</rem:name>
 </rem:urgencyValue>
 <rem:urgencyValue oid = "URV-0003">
 <rem:name>hay presión</rem:name>
@@ -2959,8 +7689,8 @@ Hour:minutes:seconds</rem:description>
 <rem:urgencyValue oid = "URV-0004">
 <rem:name>puede esperar</rem:name>
 </rem:urgencyValue>
-<rem:urgencyValue oid = "URV-0001">
-<rem:name>PD</rem:name>
+<rem:urgencyValue oid = "URV-0002">
+<rem:name>inmediatamente</rem:name>
 </rem:urgencyValue>
 </rem:predefinedValues>
 </rem:requirementsProject>
