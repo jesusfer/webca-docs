@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html xmlns:rem="http://rem.lsi.us.es">
 <head>
 <title>Proyecto WebCA</title>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
 <style type="text/css">
 <!--
             body {
@@ -78,6 +80,41 @@ Asociaciones</a>
 <a href="#SEC-0020">
 Operaciones del sistema</a>
 </th>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0027">
+Criptografía</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0026">
+Plantillas</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.3 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0028">
+Configuración CA</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.4 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0029">
+Validaciones</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.5 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0030">
+Usuarios</a>
+</td>
 </tr>
 </table>
 <p />
@@ -413,6 +450,36 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="ATT-0392" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+CertificateTemplate::
+Name</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+el nombre de esta plantilla en el sistema</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+String</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="ATT-0317" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
@@ -503,6 +570,36 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="ATT-0393" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+CertificateTemplate::
+MinBits</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+el número mínimo de bits para el tamaño de la pareja de claves</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+Integer</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="ATT-0335" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
@@ -516,7 +613,7 @@ BasicConstraints</th>
 <td align="left" valign="top">
     Este atributo representa
 <em>
-indica si el certificado es de una CA o entidad final</em>
+indica si el certificado es de una CA o entidad final y la longitud máxima de la cadena de certificados bajo este certificado</em>
 </td>
 </tr>
 <tr>
@@ -699,6 +796,36 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="ATT-0394" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+CertificateTemplate::
+AutoSign</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+si los certificados que usan esta plantilla se emiten automáticamente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+Integer</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="TYP-0001" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
@@ -752,7 +879,7 @@ RevokedCertificate</a>
 </td>
 </tr>
 <tr>
-<th align="left" valign="top" rowspan="2">Componentes</th>
+<th align="left" valign="top" rowspan="3">Componentes</th>
 <th align="left" valign="top">Nombre</th>
 <th align="left" valign="top">Tipo</th>
 <th align="left" valign="top">Multiplicidad</th>
@@ -764,6 +891,18 @@ User</td>
 <td align="left" valign="top">
 <code>
 User</code>
+</td>
+<td align="left" valign="top">
+                                1
+                            </td>
+</tr>
+<tr>
+<a name="COM-0391" />
+<td align="left" valign="top">
+Template</td>
+<td align="left" valign="top">
+<code>
+CertificateTemplate</code>
 </td>
 <td align="left" valign="top">
                                 1
@@ -1252,6 +1391,111 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="TYP-0009" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">TYP-0009</th>
+<th align="left" valign="top" width="100%" colspan="3">
+Group</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="3">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="3">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="3">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="3" align="left" valign="top">
+    Este tipo de objetos representa
+<em>
+un grupo de usuarios</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Supertipo</th>
+<td colspan="3" align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Subtipos</th>
+<td colspan="3" align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Componentes</th>
+<th align="left" valign="top">Nombre</th>
+<th align="left" valign="top">Tipo</th>
+<th align="left" valign="top">Multiplicidad</th>
+</tr>
+<tr>
+<a name="COM-0408" />
+<td align="left" valign="top">
+Members</td>
+<td align="left" valign="top">
+<code>
+            Set(
+        
+User
+        )
+    </code>
+</td>
+<td align="left" valign="top">
+0..
+                                
+MAX</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="3">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0407" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+Group::
+Name</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+el nombre del grupo</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+String</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="SEC-0022" />
 <h2 align="left">1.1 
 Tipos valor</h2><a name="VAL-0002" />
@@ -1676,6 +1920,318 @@ Ninguno</td>
 </tr>
 </table>
 <p />
+<a name="VAL-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">VAL-0005</th>
+<th align="left" valign="top" width="100%">
+KeyUsage</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este tipo valor representa
+<em>
+el valor de la extensión KeyUsage de X509</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Definición</th>
+<td align="left" valign="top">
+<code>
+</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0399" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+KeyUsage::
+Value</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+los valores posibles de la extensión</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+            Sequence(
+        
+String
+        )
+    </code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0402" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+KeyUsage::
+Critical</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+si esta extensión es crítica o no</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+Integer</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="VAL-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">VAL-0006</th>
+<th align="left" valign="top" width="100%">
+ExtendedKeyUsage</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este tipo valor representa
+<em>
+el valor de la extensión ExtendedKeyUsage de X509</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Definición</th>
+<td align="left" valign="top">
+<code>
+PD
+</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0401" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+ExtendedKeyUsage::
+Value</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+los valores posibles de la extensión</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+            Sequence(
+        
+String
+        )
+    </code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0403" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+ExtendedKeyUsage::
+Critical</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+si esta extensión es crítica o no</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+Integer</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="VAL-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">VAL-0007</th>
+<th align="left" valign="top" width="100%">
+Permission</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este tipo valor representa
+<em>
+un permiso que se puede asignar a un usuario</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Definición</th>
+<td align="left" valign="top">
+<code>
+</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ATT-0447" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Atributo variable</th>
+<th align="left" valign="top" width="100%">
+Permission::
+Name</th>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este atributo representa
+<em>
+el nombre del permiso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Tipo</th>
+<td align="left" valign="top">
+<code>
+String</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
 <a name="SEC-0023" />
 <h1 align="left">2 
 Asociaciones</h1><a name="ASO-0001" />
@@ -1952,7 +2508,9 @@ Ninguno</td>
 <p />
 <a name="SEC-0020" />
 <h1 align="left">3 
-Operaciones del sistema</h1><a name="SOP-0004" />
+Operaciones del sistema</h1><a name="SEC-0027" />
+<h2 align="left">3.1 
+Criptografía</h2><a name="SOP-0004" />
 <table border="1" width="100%">
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">SOP-0004</th>
@@ -2190,7 +2748,7 @@ la razón por la que se revoca el certificado</em></code><br />
 <a name="PRE-0386" />
 <b>certificado</b>: 
 					
-el certificado que se quiere revocar no debe haber expirado<br />
+El certificado que se quiere revocar no debe haber expirado<br />
 </td>
 </tr>
 <tr>
@@ -2204,7 +2762,7 @@ el certificado que se quiere revocar no debe haber expirado<br />
 <td align="left" valign="top">
 <a name="POS-0385" />
 <b>certificado</b>: 
-el certificado se añade a a lista de revocación de certificados de la AC<br />
+El certificado se añade a a lista de revocación de certificados de la AC<br />
 </td>
 </tr>
 <tr>
@@ -2279,11 +2837,11 @@ la fecha de la siguiente emisión</em></code><br />
 <a name="PRE-0389" />
 <b>forCertificate</b>: 
 					
-el certificado usado para firmar la CRL debe ser aún válido<br />
+El certificado usado para firmar la CRL debe ser aún válido<br />
 <a name="PRE-0390" />
 <b>nextUpdate</b>: 
 					
-la fecha de la siguiente actualización no puede haber pasado ya<br />
+La fecha de la siguiente actualización no puede haber pasado ya<br />
 </td>
 </tr>
 <tr>
@@ -2315,7 +2873,7 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top">SOP-0005</th>
 <th align="left" valign="top" width="100%">
-RepublishCertificate</th>
+UnrevokeCertificate</th>
 </tr>
 <th align="left" valign="top">Tipo del resultado</th>
 <td align="left" valign="top">
@@ -2364,7 +2922,7 @@ certificado revocado que se quiere publicar</em></code><br />
 <a name="PRE-0374" />
 <b>certificate</b>: 
 					
-certificate debe ser un certificado revocado cuya fecha de fin de validez no haya pasado aún<br />
+'certificate' debe ser un certificado revocado cuya fecha de fin de validez no haya pasado aún y cuyo motivo de revocación sea certificateHold<br />
 </td>
 </tr>
 <tr>
@@ -2378,7 +2936,7 @@ certificate debe ser un certificado revocado cuya fecha de fin de validez no hay
 <td align="left" valign="top">
 <a name="POS-0375" />
 <b>certificado</b>: 
-el certificado se quita de la lista de certificados revocados<br />
+El certificado se quita de la lista de certificados revocados<br />
 </td>
 </tr>
 <tr>
@@ -2399,12 +2957,168 @@ Ninguno</td>
 <tr bgcolor="#c8e0e0">
 <th align="left" valign="top" nowrap="1">Excepción</th>
 <th align="left" valign="top" width="100%">
-RepublishCertificate::CertificateExpired</th>
+UnrevokeCertificate::CertificateExpired</th>
 </tr>
 <tr>
 <th align="left" valign="top">Condición</th>
 <td align="left" valign="top" colspan="1">
-la fecha de fin de validez ha pasado ya</td>
+La fecha de fin de validez ha pasado ya</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+No tiene sentido revocar un certificado que ha expirado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0026" />
+<h2 align="left">3.2 
+Plantillas</h2><a name="SOP-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0006</th>
+<th align="left" valign="top" width="100%">
+SaveTemplate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Template</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0395" />
+<code>
+days : <code>
+Integer</code> -- <em>
+el número de días que un certificado es válido</em></code><br />
+<a name="PAR-0397" />
+<code>
+basicConstraints : <code>
+BasicConstraints</code> -- <em>
+el valor de la extensión BasicConstraints</em></code><br />
+<a name="PAR-0400" />
+<code>
+keyUsage : <code>
+KeyUsage</code> -- <em>
+el valor de la extensión KeyUsage</em></code><br />
+<a name="PAR-0404" />
+<code>
+extendedKeyUsage : <code>
+ExtendedKeyUsage</code> -- <em>
+el valor de la extensión ExtendedKeyUsage</em></code><br />
+<a name="PAR-0405" />
+<code>
+enabled : <code>
+Integer</code> -- <em>
+si la extensión debe ser visible para los usuarios</em></code><br />
+<a name="PAR-0409" />
+<code>
+groups : <code>
+            Set(
+        
+Group
+        )
+    </code> -- <em>
+el conjunto de grupos de usuarios que tienen acceso a esta plantilla</em></code><br />
+<a name="PAR-0454" />
+<code>
+policies : <code>
+            Set(
+        
+CertificatePolicyInformation
+        )
+    </code> -- <em>
+la lista de detales de normas que se incluirá en la extensión CertificatePolicies</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0412" />
+<b>template</b>: 
+Se crea una nueva plantilla en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0411" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+SaveTemplate::ValueError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+Si el valor de basicConstraints y keyUsage no es consistente</td>
 </tr>
 <tr>
 <th align="left" valign="top">Condición (OCL)</th>
@@ -2422,6 +3136,1540 @@ la fecha de fin de validez ha pasado ya</td>
 <th align="left" valign="top">Expresión OCL</th>
 <td align="left" valign="top">
 <code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0007</th>
+<th align="left" valign="top" width="100%">
+EnableTemplate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Template</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Activa una plantilla</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0413" />
+<code>
+template : <code>
+CertificateTemplate</code> -- <em>
+la plantilla que se desea activar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0414" />
+<b>template</b>: 
+					
+La plantilla debe existir en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0415" />
+<b>template</b>: 
+La plantilla queda activada y los usuarios con permiso pueden usarla<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0424" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+EnableTemplate::TemplateError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+La plantilla no existe en el sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0008" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0008</th>
+<th align="left" valign="top" width="100%">
+DisableTemplate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Template</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Desactiva una plantilla</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0416" />
+<code>
+template : <code>
+CertificateTemplate</code> -- <em>
+la plantilla que se desea desactivar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0417" />
+<b>template</b>: 
+					
+La plantilla debe existir en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0418" />
+<b>template</b>: 
+La plantilla queda desactivada y los usuarios dejan de poder usarla<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0423" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+DisableTemplate::TemplateError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+La plantilla no existe en el sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0009" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0009</th>
+<th align="left" valign="top" width="100%">
+RemoveTemplate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>void</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Elimina una plantilla del sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0419" />
+<code>
+template : <code>
+CertificateTemplate</code> -- <em>
+la plantilla que se desea eliminar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0420" />
+<b>template</b>: 
+					
+La plantilla debe existir en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0421" />
+<b>template</b>: 
+La plantilla queda eliminada, así como todas las versiones anteriores que pudiera haber<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>template</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0422" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+RemoveTemplate::TemplateError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+La plantilla no existe en el sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0013" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0013</th>
+<th align="left" valign="top" width="100%">
+FindTemplate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Set( CertificateTemplate )</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Filtra la lista de plantillas del sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0441" />
+<code>
+query : <code>
+String</code> -- <em>
+una cadena de texto que se usa para filtrar la lista de plantillas</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0442" />
+<b>templates</b>: 
+					
+Debe existir al menos una plantilla en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>templates</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0443" />
+<b>results</b>: 
+se devuelve una lista de plantillas cuyos nombres coinciden con la consulta de búsqueda<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>results</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0028" />
+<h2 align="left">3.3 
+Configuración CA</h2><a name="SOP-0010" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0010</th>
+<th align="left" valign="top" width="100%">
+SetupCertificate</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Certificate</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Establece el certificado de la CA, el que se usará para firmar los certificados generados por esta CA</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0425" />
+<code>
+certificate : <code>
+Certificate</code> -- <em>
+el nuevo certificado de la CA</em></code><br />
+<a name="PAR-0426" />
+<code>
+key : <code>
+Key</code> -- <em>
+la clave privada del nuevo certificado de la CA</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0427" />
+<b>key-certificate</b>: 
+					
+La clave privada key y la clave pública del certificado deben corresponderse<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>key-certificate</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0428" />
+<b>certificate</b>: 
+Se configura la CA para que use la nueva pareja clave/certificado para firmar las solicitudes de los usuarios<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>certificate</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0429" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+SetupCertificate::key-certificate</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+La pareja clave privada/certificado no se corresponden</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+La clave pública del certificado 'certificate' no se corresponde con la clave privada de 'key'</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0011" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0011</th>
+<th align="left" valign="top" width="100%">
+SetupCRL</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>void</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Configura la generación de CRL</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0430" />
+<code>
+days : <code>
+Integer</code> -- <em>
+la frecuencia de actualización de las CRLs en días</em></code><br />
+<a name="PAR-0431" />
+<code>
+uRLs : <code>
+            Set(
+        
+String
+        )
+    </code> -- <em>
+la lista de URLs donde se pueden descargar las CRLs y que se añadirán en los certificados emitidos por la CA</em></code><br />
+<a name="PAR-0435" />
+<code>
+path : <code>
+String</code> -- <em>
+la ruta en el sistema donde se guardará el archivo .crl con la lista de revocación de certificados</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0432" />
+<b>days</b>: 
+					
+days debe ser mayor estricto de 0<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>days</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0434" />
+<b>crl</b>: 
+el sistema generará una nueva CRL cada 'days' días y añadirá en la extensión CDP las URLs que haya en uRLs<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>crl</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0436" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+SetupCRL::PathNotFoundError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+la ruta de exportación no es accesible por el sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+<font color="red"><b>PD</b></font>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0012" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0012</th>
+<th align="left" valign="top" width="100%">
+SetupOCSP</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>void</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Configura las rutas OCSP</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0438" />
+<code>
+uRL : <code>
+Date</code> -- <em>
+la URL que se añadirá en la extensión AIA de los certificados emitidos por la CA</em></code><br />
+<a name="PAR-0440" />
+<code>
+certURL : <code>
+String</code> -- <em>
+La URL donde se puede descargar el certificado que firma las respuestas OCSP</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0439" />
+<b>aia</b>: 
+La extensión AIA de los certificados emitidos incluirá la URL del servidor OCSP 'uRL' y la URL 'certURL' del certificado que firma las respuestas OCSP<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>aia</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0015" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0015</th>
+<th align="left" valign="top" width="100%">
+AddCertificatePolicy</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>CertificatePolicyInformation</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Añade una descripción de norma de emisión de certificados</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0455" />
+<code>
+policyInformation : <code>
+RevocationList</code> -- <em>
+los detalles de la norma a almacenar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0456" />
+<b>policy</b>: 
+La información de la norma queda registrada en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>policy</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0016" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0016</th>
+<th align="left" valign="top" width="100%">
+RemoveCertificatePolicy</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>void</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Elimina una descripción de norma de emisión de certificados</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0457" />
+<code>
+policyInformation : <code>
+RevocationList</code> -- <em>
+una referencia de la norma que hay que eliminar del sistema</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0458" />
+<b>policy</b>: 
+La información de la norma se elimina del sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>policy</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0029" />
+<h2 align="left">3.4 
+Validaciones</h2><a name="SOP-0017" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0017</th>
+<th align="left" valign="top" width="100%">
+EmailValidationStart</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>String</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Inicia la validación de una dirección de correo electrónico. Asocia a un usuario una dirección de correo y un código único que se debe enviar por email.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0459" />
+<code>
+user : <code>
+User</code> -- <em>
+el usuario que inicia la validación</em></code><br />
+<a name="PAR-0460" />
+<code>
+email : <code>
+String</code> -- <em>
+la dirección de correo que se quiere validar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0461" />
+<b>code</b>: 
+Se envía un código único a la dirección de correo electrónico<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>code</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0018" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0018</th>
+<th align="left" valign="top" width="100%">
+EmailValidationComplete</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Bool</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Termina la validación de una dirección de correo electrónico. Si el código que envía el usuario coincide con el almacenado en el sistema, entonces el usuario queda activado.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0462" />
+<code>
+user : <code>
+User</code> -- <em>
+el usuario que inicia la validación</em></code><br />
+<a name="PAR-0463" />
+<code>
+code : <code>
+String</code> -- <em>
+código que el usuario ha recibido por correo electrónico</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0465" />
+<b>user</b>: 
+					
+El usuario debe existir en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>user</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0464" />
+<b>user</b>: 
+El usuario queda activado en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>user</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0466" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+EmailValidationComplete::ValueError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+El código enviado por el usuario no coincide con el almacenado por el sistema</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+La validación queda cancelada y el usuario queda inactivo.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0019" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0019</th>
+<th align="left" valign="top" width="100%">
+DNSValidationStart</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>String</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Inicia la validación de un dominio DNS. El sistema crea un código único que el usuario debe incluir en un registro TXT del dominio DNS que quiere validar.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0467" />
+<code>
+user : <code>
+User</code> -- <em>
+el usuario que inicia la validación</em></code><br />
+<a name="PAR-0468" />
+<code>
+domain : <code>
+String</code> -- <em>
+el nombre del dominio que se quiere validar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0470" />
+<b>user</b>: 
+					
+El usuario debe existir en el sistema y estar activo<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>user</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0471" />
+<b>code</b>: 
+Se asocia un código único al usuario y dominio y se devuelve el código para que el usuario lo añada en su dominio.<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>code</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0469" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+DNSValidationStart::DomainNotFoundError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+El nombre del dominio no se puede resolver</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+El nombre del dominio debe ser un nombre de dominio público y accesible desde la CA</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SOP-0020" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0020</th>
+<th align="left" valign="top" width="100%">
+DNSValidationComplete</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>Bool</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Completa la validación de un dominio DNS. Comprueba que el valor asociado al usuario y dominio existe en un registro TXT del dominio y coincide con el valor registrado.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0472" />
+<code>
+user : <code>
+User</code> -- <em>
+el usuario que inicia la validación</em></code><br />
+<a name="PAR-0473" />
+<code>
+domain : <code>
+String</code> -- <em>
+el nombre del dominio que se quiere validar</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0475" />
+<b>user</b>: 
+					
+El usuario debe existir en el sistema y estar activo<br />
+<a name="PRE-0478" />
+<b>domain</b>: 
+					
+El usuario debe tener pendiente una validación del dominio<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>user</b>: true</code><br />
+<code><b>domain</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0476" />
+<b>domain</b>: 
+El dominio queda validado y asociado con el usuario<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>domain</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="OPX-0474" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top" nowrap="1">Excepción</th>
+<th align="left" valign="top" width="100%">
+DNSValidationComplete::DomainNotFoundError</th>
+</tr>
+<tr>
+<th align="left" valign="top">Condición</th>
+<td align="left" valign="top" colspan="1">
+El nombre del dominio no se puede resolver</td>
+</tr>
+<tr>
+<th align="left" valign="top">Condición (OCL)</th>
+<td align="left" valign="top">
+<code>false</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión</th>
+<td align="left" valign="top" colspan="1">
+El nombre del dominio debe ser un nombre de dominio público y accesible desde la CA</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresión OCL</th>
+<td align="left" valign="top">
+<code>true</code>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0030" />
+<h2 align="left">3.5 
+Usuarios</h2><a name="SOP-0014" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">SOP-0014</th>
+<th align="left" valign="top" width="100%">
+UpdateUser</th>
+</tr>
+<th align="left" valign="top">Tipo del resultado</th>
+<td align="left" valign="top">
+<code>User</code>
+</td>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 18/05/2018 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+Jesús Fernández</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+Cambia las propiedades de un usuario</td>
+</tr>
+<tr>
+<th align="left" valign="top">Parámetros</th>
+<td align="left" valign="top">
+<a name="PAR-0444" />
+<code>
+user : <code>
+User</code> -- <em>
+el usuario que se quiere modificar</em></code><br />
+<a name="PAR-0445" />
+<code>
+groups : <code>
+            Set(
+        
+Group
+        )
+    </code> -- <em>
+el conjunto de grupos a los que pertenece el usuario</em></code><br />
+<a name="PAR-0448" />
+<code>
+permissions : <code>
+            Set(
+        
+Permission
+        )
+    </code> -- <em>
+el conjunto de permisos que el usuario debe tener en el sistema</em></code><br />
+<a name="PAR-0452" />
+<code>
+operator : <code>
+Integer</code> -- <em>
+si el usuario es operador del sistema o no</em></code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición</th>
+<td align="left" valign="top">
+<a name="PRE-0449" />
+<b>user</b>: 
+					
+El usuario debe existir en el sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de precondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>user</b>: true</code><br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición</th>
+<td align="left" valign="top">
+<a name="POS-0450" />
+<b>groups</b>: 
+El usuario pertenece exclusivamente a los grupos que hay en 'groups'<br />
+<a name="POS-0451" />
+<b>permissions</b>: 
+El usuario tendrá exclusivamente los permisos que aparecen en 'permissions'<br />
+<a name="POS-0453" />
+<b>operator</b>: 
+Según el valor de 'operator' el usuario podrá acceder a la sección de administración del sistema<br />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Expresiones de postcondición (OCL)</th>
+<td align="left" valign="top">
+<code><b>groups</b>: true</code><br />
+<code><b>permissions</b>: true</code><br />
+<code><b>operator</b>: true</code><br />
 </td>
 </tr>
 <tr>
